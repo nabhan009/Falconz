@@ -282,7 +282,7 @@ const Contact = () => {
               📞 Call Now
             </button>
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
-              💬 Live Chat
+             <a href="tel:+918606440552">💬 Live Chat</a> 
             </button>
             <Link 
               to="/shop" 

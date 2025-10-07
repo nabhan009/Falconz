@@ -132,9 +132,9 @@ const Orders = () => {
                   </div>
 
                   <div className="flex justify-between items-center pt-4 border-t border-gray-200">
-                    <div className="text-sm text-gray-600">
+                    {/* <div className="text-sm text-gray-600">
                       {order.items.length} items • {order.shippingAddress.city}, {order.shippingAddress.state}
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               ))}

@@ -161,7 +161,7 @@ function Product() {
           <button
             onClick={() => navigate(-1)}
             className="flex items-center gap-2 text-gray-600 hover:text-green-600 transition-colors"
-          >
+           >
             <FaArrowLeft />
             Back to Shop
           </button>
@@ -255,6 +255,11 @@ function Product() {
                   <FaRegHeart className="text-gray-400 text-xl" />
                 )}
                 Wishlist
+              </button>
+
+              <button  className="flex-1 bg-blue-600 text-white py-4 rounded-xl font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center gap-3 text-lg"
+>
+                Buy Now
               </button>
             </div>
 

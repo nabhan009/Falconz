@@ -13,6 +13,7 @@ const Cart = () => {
   const [orderProcessing, setOrderProcessing] = useState(false);
   const navigate = useNavigate();
 
+
   // Load cart from backend
   useEffect(() => {
     if (!user) {
@@ -298,17 +299,17 @@ const viewOrders = () => {
               </Link> */}
 
 <div className="space-y-3">
-  {/* <button
+  <button
     onClick={closeOrderConfirm}
     className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
   >
     Continue Shopping
-  </button> */}
+  </button>
   <button
     onClick={viewOrders}
     className="w-full bg-gray-200 text-gray-700 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
   >
-    View My Orders
+    View Orders
   </button>
 </div>
             </div>

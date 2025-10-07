@@ -1,23 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { MagnifyingGlassIcon, HeartIcon, ShoppingBagIcon, UserIcon, Bars3Icon } from '@heroicons/react/24/outline';
+import { useAuth } from '../context/AuthContext';
 
 const Navbar = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const {
+    user,
+    logout,
+    wishlistCount,
+    cartCount,
+    profileOpen,
+    setProfileOpen,
+    mobileMenuOpen,
+    setMobileMenuOpen,
+  } = useAuth();
+
   const [searchQuery, setSearchQuery] = useState('');
-//   const [mobileSearch, setMobileSearch] = useState(false);
-  const [user, setUser] = useState(null);
-  const [profileOpen, setProfileOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-
-  // Load logged-in user from localStorage
-  useEffect(() => {
-    const storedUser = localStorage.getItem('loggedInUser');
-    if (storedUser) {
-      setUser(JSON.parse(storedUser));
-    }
-  }, [location]); // re-check on route change
 
   const links = [
     { name: 'Home', path: '/' },
@@ -31,7 +31,6 @@ const Navbar = () => {
     if (searchQuery.trim()) {
       navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
       setSearchQuery('');
-    //   setMobileSearch(false);
     }
   };
 
@@ -41,16 +40,6 @@ const Navbar = () => {
         ? 'bg-[#4CBB17] text-white shadow-lg scale-105'
         : 'text-[#4CBB17] hover:bg-[#48872B] hover:text-white hover:shadow-md'
     }`;
-
-  const handleLogout = () => {
-    localStorage.removeItem('loggedInUser');
-    setUser(null);
-    setProfileOpen(false);
-    navigate('/signup');
-  };
-
-  const wishlistCount = user?.wishlist?.length || 0;
-  const cartCount = user?.cart?.length || 0;
 
   return (
     <>
@@ -87,10 +76,7 @@ const Navbar = () => {
             </form>
 
             {/* Wishlist */}
-            <button
-              onClick={() => navigate('/wishList')}
-              className="relative p-2 rounded-full hover:bg-green-100"
-            >
+            <button onClick={() => navigate('/wishList')} className="relative p-2 rounded-full hover:bg-green-100">
               <HeartIcon className="h-6 w-6 text-green-600" />
               {wishlistCount > 0 && (
                 <span className="absolute -top-1 -right-1 bg-green-600 text-white rounded-full w-5 h-5 text-xs flex items-center justify-center">
@@ -100,10 +86,7 @@ const Navbar = () => {
             </button>
 
             {/* Cart */}
-            <button
-              onClick={() => navigate('/Cart')}
-              className="relative p-2 rounded-full hover:bg-green-100"
-            >
+            <button onClick={() => navigate('/Cart')} className="relative p-2 rounded-full hover:bg-green-100">
               <ShoppingBagIcon className="h-6 w-6 text-green-600" />
               {cartCount > 0 && (
                 <span className="absolute -top-1 -right-1 bg-green-600 text-white rounded-full w-5 h-5 text-xs flex items-center justify-center">
@@ -113,68 +96,52 @@ const Navbar = () => {
             </button>
 
             {/* Profile */}
-            <button
-              onClick={() => setProfileOpen(!profileOpen)}
-              className="p-2 rounded-full hover:bg-green-100"
-            >
+            <button onClick={() => setProfileOpen(!profileOpen)} className="p-2 rounded-full hover:bg-green-100">
               <UserIcon className="h-6 w-6 text-green-600" />
             </button>
 
             {/* Mobile Menu Button */}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-full hover:bg-green-100"
-            >
+            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="lg:hidden p-2 rounded-full hover:bg-green-100">
               <Bars3Icon className="h-6 w-6 text-green-600" />
             </button>
           </div>
         </div>
       </nav>
 
-      {/* Profile Simple Popup */}
+      {/* Profile Popup */}
       {profileOpen && (
         <div className="absolute top-16 right-4 bg-white shadow-lg rounded-lg p-4 border w-60 z-50">
           {user ? (
             <div className="space-y-2 text-sm">
               <p className="font-bold text-green-600">Hello, {user.name}</p>
-                <button
-                onClick={()=>{navigate('/Profile')
-                   setProfileOpen(!profileOpen)}
-                }
+              <button
+                onClick={() => { navigate('/Profile'); setProfileOpen(false); }}
                 className="w-full bg-green-600 text-white py-2 mt-2 rounded-lg text-sm"
               >
                 Profile
               </button>
-                            
-                <button
-                onClick={()=>{navigate('/Orders')
-                    setProfileOpen(!profileOpen)}   
-                }
+              <button
+                onClick={() => { navigate('/Orders'); setProfileOpen(false); }}
                 className="w-full bg-green-600 text-white py-2 mt-2 rounded-lg text-sm"
               >
                 Order History
               </button>
               <button
-                onClick={handleLogout}
+                onClick={()=>{logout
+                    navigate('/login')
+                }}
                 className="w-full bg-red-500 text-white py-2 mt-2 rounded-lg text-sm hover:bg-red-600"
               >
                 Logout
               </button>
-              
             </div>
           ) : (
             <div className="space-y-2 text-sm">
               <p className="font-bold text-gray-700">Welcome Guest</p>
-              <button
-                onClick={() => { navigate('/Login'); setProfileOpen(false); }}
-                className="w-full bg-green-600 text-white py-2 rounded-lg text-sm hover:bg-green-700"
-              >
+              <button onClick={() => { navigate('/Login'); setProfileOpen(false); }} className="w-full bg-green-600 text-white py-2 rounded-lg text-sm hover:bg-green-700">
                 Login
               </button>
-              <button
-                onClick={() => { navigate('/Signup'); setProfileOpen(false); }}
-                className="w-full bg-gray-200 text-gray-700 py-2 rounded-lg text-sm hover:bg-gray-300"
-              >
+              <button onClick={() => { navigate('/Signup'); setProfileOpen(false); }} className="w-full bg-gray-200 text-gray-700 py-2 rounded-lg text-sm hover:bg-gray-300">
                 Sign Up
               </button>
             </div>

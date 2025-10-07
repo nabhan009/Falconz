@@ -6,10 +6,12 @@ export const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [profileOpen, setProfileOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // Load user from localStorage on mount - FIXED KEY
+  // Load user from localStorage on mount
   useEffect(() => {
-    const storedUser = localStorage.getItem("loggedInUser"); // Changed from "user" to "loggedInUser"
+    const storedUser = localStorage.getItem("loggedInUser");
     if (storedUser) {
       try {
         setUser(JSON.parse(storedUser));
@@ -21,7 +23,7 @@ export const AuthProvider = ({ children }) => {
     setLoading(false);
   }, []);
 
-  // Login function - UPDATED
+  // ✅ Login function
   const login = async (email, password) => {
     const { data } = await api.get("/users", { params: { email } });
     const user = data[0];
@@ -33,35 +35,45 @@ export const AuthProvider = ({ children }) => {
     const updatedUser = { ...user, isLoggedIn: true };
     await api.patch(`/users/${user.id}`, updatedUser);
 
-    // Save locally with consistent key
-    localStorage.setItem("loggedInUser", JSON.stringify(updatedUser)); // Changed to loggedInUser
+    localStorage.setItem("loggedInUser", JSON.stringify(updatedUser));
     localStorage.setItem("userId", updatedUser.id);
 
     setUser(updatedUser);
     return updatedUser;
   };
 
-  // Logout function - UPDATED
+  // ✅ Logout function
   const logout = async () => {
     if (user?.id) {
       await api.patch(`/users/${user.id}`, { isLoggedIn: false });
     }
-    localStorage.removeItem("loggedInUser"); // Changed to loggedInUser
+    localStorage.removeItem("loggedInUser");
     localStorage.removeItem("userId");
     setUser(null);
+    setProfileOpen(false);
   };
 
-  // NEW: Update user function for cart/wishlist updates
+  // ✅ Update user for cart/wishlist
   const updateUser = (updatedUserData) => {
     localStorage.setItem("loggedInUser", JSON.stringify(updatedUserData));
     setUser(updatedUserData);
   };
 
+  // ✅ Counts
+  const wishlistCount = user?.wishlist?.length || 0;
+  const cartCount = user?.cart?.length || 0;
+
   const value = {
     user,
     login,
     logout,
-    updateUser, // Added this function
+    updateUser,
+    wishlistCount,
+    cartCount,
+    profileOpen,
+    setProfileOpen,
+    mobileMenuOpen,
+    setMobileMenuOpen,
     loading,
     isAuthenticated: !!user
   };
@@ -73,11 +85,11 @@ export const AuthProvider = ({ children }) => {
   );
 };
 
-// Custom hook for convenience
+// ✅ Custom hook
 export const useAuth = () => {
   const context = useContext(AuthContext);
   if (!context) {
-    throw new Error('useAuth must be used within an AuthProvider');
+    throw new Error("useAuth must be used within an AuthProvider");
   }
   return context;
 };
