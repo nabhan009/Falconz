@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Footer from '../component/Footer';
+import Navbar from '../component/Navbar';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -253,22 +255,6 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Map Section */}
-      {/* <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Find Us Here</h2>
-          <div className="bg-gray-200 rounded-2xl h-96 flex items-center justify-center">
-            <div className="text-center">
-              <div className="text-6xl mb-4">📍</div>
-              <p className="text-gray-600 text-lg mb-4">Interactive Map</p>
-              <p className="text-gray-500">
-                123 Fresh Food Street, Green City, GC 12345
-              </p>
-            </div> */}
-            {/* You can replace this with an actual Google Maps embed */}
-          {/* </div>
-        </div>
-      </section> */}
 
       {/* CTA Section */}
       <section className="py-16 bg-green-600 text-white">

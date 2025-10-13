@@ -3,7 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import api from '../Api/Api';
 import { useAuth } from '../context/AuthContext';
 import { toast } from 'react-toastify';
-
+import Navbar from '../component/Navbar';
+import Footer from '../component/Footer';
 const Cart = () => {
   const { user, updateUser } = useAuth();
   const [cartItems, setCartItems] = useState([]);
@@ -13,14 +14,12 @@ const Cart = () => {
   const [orderProcessing, setOrderProcessing] = useState(false);
   const navigate = useNavigate();
 
-
-  // Load cart from backend
-  useEffect(() => {
-    if (!user) {
+      if (!user) {
       navigate('/login');
-      return;
     }
 
+  // load cart from the user data
+  useEffect(() => {
     const fetchCart = async () => {
       try {
         const { data: userData } = await api.get(`/users/${user.id}`);
@@ -35,6 +34,7 @@ const Cart = () => {
     fetchCart();
   }, [user, navigate]);
 
+  // quantity function
   const updateQuantity = async (cartId, newQuantity) => {
     if (newQuantity < 1) return;
     
@@ -61,6 +61,7 @@ const Cart = () => {
     }
   };
 
+  // cart remove function
   const removeFromCart = async (cartId) => {
     setUpdating(cartId);
     try {
@@ -86,6 +87,7 @@ const Cart = () => {
     }
   };
 
+  // remove all from cart
   const clearCart = async () => {
     if (!window.confirm('Are you sure you want to clear your entire cart?')) return;
     
@@ -105,6 +107,7 @@ const Cart = () => {
     }
   };
 
+  // total price calc
   const calculateTotal = () => cartItems.reduce((sum, item) => {
     const price = typeof item.price === 'number' ? item.price : parseFloat(item.price || 0);
     return sum + (price * (item.quantity || 1));
@@ -113,7 +116,7 @@ const Cart = () => {
   const calculateTotalItems = () => cartItems.reduce((sum, item) => sum + (item.quantity || 1), 0);
 
 
-// In your Cart component, update the proceedToCheckout function:
+//  proceedToCheckout function:
 const proceedToCheckout = async () => {
   if (cartItems.length === 0) {
     alert('Your cart is empty!');
@@ -129,14 +132,8 @@ const proceedToCheckout = async () => {
       id: `order_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       orderDate: new Date().toISOString(),
       items: cartItems,
-      totalAmount: calculateTotal() * 1.1, // Including tax
+      totalAmount: calculateTotal() * 1.1, 
       status: 'Success',
-      shippingAddress: user.shippingAddress || {
-        street: '123 Main St',
-        city: 'Your City',
-        state: 'Your State',
-        zipCode: '12345'
-      }
     };
 
     // Get current user data
@@ -168,10 +165,6 @@ const proceedToCheckout = async () => {
 };
 
 // Add this function to navigate to orders
-const viewOrders = () => {
-  setShowOrderConfirm(false);
-  navigate('/orders');
-};
   const closeOrderConfirm = () => {
     setShowOrderConfirm(false);
   };
@@ -182,37 +175,6 @@ const viewOrders = () => {
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto mb-4"></div>
           <p className="text-gray-600">Loading your cart...</p>
-        </div>
-      </div>
-    );
-  }
-
-  // If user is not logged in
-  if (!user) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
-        <div className="text-center max-w-md mx-auto p-8 bg-white rounded-lg shadow-lg">
-          <div className="w-24 h-24 mx-auto mb-4 bg-yellow-100 rounded-full flex items-center justify-center">
-            <svg className="w-12 h-12 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-            </svg>
-          </div>
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">Login Required</h2>
-          <p className="text-gray-600 mb-6">Please login to view your shopping cart.</p>
-          <div className="space-y-3">
-            <button 
-              onClick={() => navigate('/login')}
-              className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition duration-300"
-            >
-              Login to Your Account
-            </button>
-            <button 
-              onClick={() => navigate('/signup')}
-              className="w-full bg-gray-200 text-gray-700 py-3 rounded-lg font-semibold hover:bg-gray-300 transition duration-300"
-            >
-              Create New Account
-            </button>
-          </div>
         </div>
       </div>
     );
@@ -252,7 +214,9 @@ const viewOrders = () => {
 
             <div className="space-y-3">
               <button
-                onClick={closeOrderConfirm}
+                onClick={()=>{closeOrderConfirm()
+                  navigate('/shop')
+                }}
                 className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
               >
                 Continue Shopping
@@ -260,7 +224,7 @@ const viewOrders = () => {
               <button
                 onClick={() => {
                   closeOrderConfirm();
-                  navigate('/shop');
+                  navigate('/orders');
                 }}
                 className="w-full bg-gray-200 text-gray-700 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
               >
@@ -271,7 +235,7 @@ const viewOrders = () => {
         </div>
       )}
 
-      {/* Header */}
+      {/* head */}
       <div className="bg-white shadow-sm">
         <div className="container mx-auto px-4 py-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
@@ -291,22 +255,16 @@ const viewOrders = () => {
                   Clear Cart
                 </button>
               )}
-              {/* <Link
-                to="/shop"
-                className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
-              >
-                ← Continue Shopping
-              </Link> */}
 
 <div className="space-y-3">
   <button
-    onClick={closeOrderConfirm}
+    onClick={()=>navigate('/shop')}
     className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
   >
     Continue Shopping
   </button>
   <button
-    onClick={viewOrders}
+    onClick={()=>navigate('/orders')}
     className="w-full bg-gray-200 text-gray-700 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
   >
     View Orders
@@ -320,6 +278,7 @@ const viewOrders = () => {
       <div className="container mx-auto px-4 py-8">
         {cartItems.length > 0 ? (
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
             {/* Cart Items */}
             <div className="lg:col-span-2">
               <div className="bg-white rounded-lg shadow-sm">
@@ -345,7 +304,7 @@ const viewOrders = () => {
                             </h3>
                             <p className="text-gray-600 text-sm mt-1">{item.description || "Fresh and high-quality product"}</p>
                             <p className="text-green-600 font-semibold mt-2">
-                              ${typeof item.price === 'number' ? item.price.toFixed(2) : parseFloat(item.price || 0).toFixed(2)}
+                              ₹{typeof item.price === 'number' ? item.price.toFixed(2) : parseFloat(item.price || 0).toFixed(2)}
                             </p>
                           </div>
                           <button
@@ -385,7 +344,7 @@ const viewOrders = () => {
                           </div>
                           <div className="text-right">
                             <p className="text-lg font-bold text-green-600">
-                              ${((typeof item.price === 'number' ? item.price : parseFloat(item.price || 0)) * (item.quantity || 1)).toFixed(2)}
+                              ₹{((typeof item.price === 'number' ? item.price : parseFloat(item.price || 0)) * (item.quantity || 1)).toFixed(2)}
                             </p>
                           </div>
                         </div>
@@ -405,7 +364,7 @@ const viewOrders = () => {
                 <div className="p-6 space-y-4">
                   <div className="flex justify-between text-gray-600">
                     <span>Items ({calculateTotalItems()})</span>
-                    <span>${calculateTotal().toFixed(2)}</span>
+                    <span>₹{calculateTotal().toFixed(2)}</span>
                   </div>
                   <div className="flex justify-between text-gray-600">
                     <span>Shipping</span>
@@ -413,12 +372,12 @@ const viewOrders = () => {
                   </div>
                   <div className="flex justify-between text-gray-600">
                     <span>Tax</span>
-                    <span>${(calculateTotal() * 0.1).toFixed(2)}</span>
+                    <span>₹{(calculateTotal() * 0.1).toFixed(2)}</span>
                   </div>
                   <div className="border-t border-gray-200 pt-4">
                     <div className="flex justify-between text-lg font-bold text-gray-800">
                       <span>Total</span>
-                      <span>${(calculateTotal() * 1.1).toFixed(2)}</span>
+                      <span>₹{(calculateTotal() * 1.1).toFixed(2)}</span>
                     </div>
                   </div>
 

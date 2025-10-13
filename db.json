@@ -1,100 +1,13 @@
 {
   "users": [
     {
-      "id": "1",
-      "name": "zxcv",
-      "email": "zap@gmail.com",
+      "id": "8011",
+      "name": "savad",
+      "email": "savad@gmail.com",
       "password": "zxcvbnm",
-      "cart": [],
-      "wishlist": []
-    },
-    {
-      "id": "2273",
-      "name": "shamon",
-      "email": "shamon@gmail.com",
-      "password": "mnbvcxz",
-      "cart": [],
-      "wishlist": []
-    },
-    {
-      "id": "7079",
-      "name": "babu",
-      "email": "babu@gmail.com",
-      "password": "zxcvbnm",
-      "cart": [],
-      "wishlist": []
-    },
-    {
-      "id": "0c10",
-      "name": "dsds",
-      "email": "dsds@gmail.com",
-      "password": "123456",
-      "cart": [],
-      "wishlist": []
-    },
-    {
-      "id": "2363",
-      "name": "adi",
-      "email": "adi@gmail.com",
-      "password": "1234567",
       "cart": [
         {
-          "id": 28,
-          "name": "7Eleven Chips",
-          "price": 1.69,
-          "image": "https://i.pinimg.com/736x/9b/30/c5/9b30c56fdd77c11fc237d0f07e7629d2.jpg",
-          "category": "Beverages & Snacks",
-          "unit": "per lb",
-          "description": "Convenient, flavorful snack chips available in a variety of tastes, perfect for on-the-go munching",
-          "nutrition": {
-            "calories": "89 kcal",
-            "protein": "1.1g",
-            "fat": "0.3g",
-            "carbs": "23g",
-            "vitamins": "Potassium, Vitamin B6"
-          },
-          "rating": 4.5,
-          "reviews": 198,
-          "inStock": true,
-          "tags": [
-            "organic",
-            "Healthy",
-            "energy"
-          ],
-          "cartId": 1759486118555,
-          "quantity": 3,
-          "addedAt": "2025-10-03T10:08:38.555Z"
-        },
-        {
-          "id": 20,
-          "name": "Avocados",
-          "price": 2.49,
-          "originalPrice": 2.99,
-          "image": "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?w=400",
-          "category": "fruits",
-          "unit": "each",
-          "description": "Hass avocados, perfectly ripe",
-          "nutrition": {
-            "calories": "160 kcal",
-            "protein": "2g",
-            "fat": "15g",
-            "carbs": "9g",
-            "vitamins": "Healthy Fats, Fiber"
-          },
-          "rating": 4.6,
-          "reviews": 245,
-          "inStock": true,
-          "tags": [
-            "healthy-fats",
-            "creamy",
-            "ripe"
-          ],
-          "cartId": 1759486136438,
-          "quantity": 2,
-          "addedAt": "2025-10-03T10:08:56.438Z"
-        },
-        {
-          "id": 26,
+          "id": "26",
           "name": "Avacado Smoothie",
           "price": 3.69,
           "image": "https://i.pinimg.com/1200x/96/c0/fc/96c0fc6dd3d87abd3e6f747dc8d11964.jpg",
@@ -116,33 +29,38 @@
             "Healthy",
             "energy"
           ],
-          "cartId": 1759488090571,
-          "quantity": 1,
-          "addedAt": "2025-10-03T10:41:30.571Z"
+          "cartId": 1760167099086,
+          "quantity": 8,
+          "addedAt": "2025-10-11T07:18:19.086Z"
         }
       ],
       "wishlist": [
         {
-          "id": 5,
-          "name": "Eggs",
-          "price": 4.99,
-          "category": "dairy",
-          "image": "https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=400",
-          "description": "Farm fresh eggs, 12 count",
+          "id": "26",
+          "name": "Avacado Smoothie",
+          "price": 3.69,
+          "image": "https://i.pinimg.com/1200x/96/c0/fc/96c0fc6dd3d87abd3e6f747dc8d11964.jpg",
+          "category": "Beverages & Snacks",
+          "unit": "per lb",
+          "description": " Creamy, nutritious, and naturally sweet - a refreshing and healthy drink.",
           "nutrition": {
-            "calories": "165 kcal",
-            "protein": "31g",
-            "fat": "3.6g",
-            "carbs": "0g",
-            "vitamins": "B6, B12"
+            "calories": "89 kcal",
+            "protein": "1.1g",
+            "fat": "0.3g",
+            "carbs": "23g",
+            "vitamins": "Potassium, Vitamin B6"
           },
           "rating": 4.5,
-          "reviews": 128,
+          "reviews": 198,
           "inStock": true,
-          "isFeatured": true
+          "tags": [
+            "organic",
+            "Healthy",
+            "energy"
+          ]
         },
         {
-          "id": 20,
+          "id": "20",
           "name": "Avocados",
           "price": 2.49,
           "originalPrice": 2.99,
@@ -165,24 +83,42 @@
             "creamy",
             "ripe"
           ]
+        },
+        {
+          "id": "28",
+          "name": "7Eleven Chips",
+          "price": 1.69,
+          "image": "https://i.pinimg.com/736x/9b/30/c5/9b30c56fdd77c11fc237d0f07e7629d2.jpg",
+          "category": "Beverages & Snacks",
+          "unit": "per lb",
+          "description": "Convenient, flavorful snack chips available in a variety of tastes, perfect for on-the-go munching",
+          "nutrition": {
+            "calories": "89 kcal",
+            "protein": "1.1g",
+            "fat": "0.3g",
+            "carbs": "23g",
+            "vitamins": "Potassium, Vitamin B6"
+          },
+          "rating": 4.5,
+          "reviews": 198,
+          "inStock": true,
+          "tags": [
+            "organic",
+            "Healthy",
+            "energy"
+          ]
         }
-      ]
-    },
-    {
-      "id": "6263",
-      "name": "savad",
-      "email": "savad@gmail.com",
-      "password": "zxcvbnm",
-      "cart": [],
-      "wishlist": [],
-      "isLoggedIn": true,
+      ],
+      "isLoggedIn": false,
+      "role": "User",
+      "isBlock": false,
       "orders": [
         {
-          "id": "order_1759516713468_jubr8fiic",
-          "orderDate": "2025-10-03T18:38:33.468Z",
+          "id": "order_1760095347728_bih0ugrta",
+          "orderDate": "2025-10-10T11:22:27.728Z",
           "items": [
             {
-              "id": 26,
+              "id": "26",
               "name": "Avacado Smoothie",
               "price": 3.69,
               "image": "https://i.pinimg.com/1200x/96/c0/fc/96c0fc6dd3d87abd3e6f747dc8d11964.jpg",
@@ -204,26 +140,47 @@
                 "Healthy",
                 "energy"
               ],
-              "cartId": 1759516705605,
+              "cartId": 1760095343162,
               "quantity": 1,
-              "addedAt": "2025-10-03T18:38:25.605Z"
+              "addedAt": "2025-10-10T11:22:23.162Z"
             }
           ],
           "totalAmount": 4.059,
-          "status": "processing",
-          "shippingAddress": {
-            "street": "123 Main St",
-            "city": "Your City",
-            "state": "Your State",
-            "zipCode": "12345"
-          }
+          "status": "Success"
         },
         {
-          "id": "order_1759517181812_kl0sh2gs2",
-          "orderDate": "2025-10-03T18:46:21.812Z",
+          "id": "order_1760158303775_gw2ojvs5r",
+          "orderDate": "2025-10-11T04:51:43.775Z",
           "items": [
             {
-              "id": 20,
+              "id": "26",
+              "name": "Avacado Smoothie",
+              "price": 3.69,
+              "image": "https://i.pinimg.com/1200x/96/c0/fc/96c0fc6dd3d87abd3e6f747dc8d11964.jpg",
+              "category": "Beverages & Snacks",
+              "unit": "per lb",
+              "description": " Creamy, nutritious, and naturally sweet - a refreshing and healthy drink.",
+              "nutrition": {
+                "calories": "89 kcal",
+                "protein": "1.1g",
+                "fat": "0.3g",
+                "carbs": "23g",
+                "vitamins": "Potassium, Vitamin B6"
+              },
+              "rating": 4.5,
+              "reviews": 198,
+              "inStock": true,
+              "tags": [
+                "organic",
+                "Healthy",
+                "energy"
+              ],
+              "cartId": 1760158293068,
+              "quantity": 1,
+              "addedAt": "2025-10-11T04:51:33.068Z"
+            },
+            {
+              "id": "20",
               "name": "Avocados",
               "price": 2.49,
               "originalPrice": 2.99,
@@ -246,318 +203,12 @@
                 "creamy",
                 "ripe"
               ],
-              "cartId": 1759517177013,
+              "cartId": 1760158294473,
               "quantity": 1,
-              "addedAt": "2025-10-03T18:46:17.013Z"
-            }
-          ],
-          "totalAmount": 2.7390000000000003,
-          "status": "processing",
-          "shippingAddress": {
-            "street": "123 Main St",
-            "city": "Your City",
-            "state": "Your State",
-            "zipCode": "12345"
-          }
-        },
-        {
-          "id": "order_1759550883055_9shw6pg7t",
-          "orderDate": "2025-10-04T04:08:03.055Z",
-          "items": [
-            {
-              "id": 26,
-              "name": "Avacado Smoothie",
-              "price": 3.69,
-              "image": "https://i.pinimg.com/1200x/96/c0/fc/96c0fc6dd3d87abd3e6f747dc8d11964.jpg",
-              "category": "Beverages & Snacks",
-              "unit": "per lb",
-              "description": " Creamy, nutritious, and naturally sweet - a refreshing and healthy drink.",
-              "nutrition": {
-                "calories": "89 kcal",
-                "protein": "1.1g",
-                "fat": "0.3g",
-                "carbs": "23g",
-                "vitamins": "Potassium, Vitamin B6"
-              },
-              "rating": 4.5,
-              "reviews": 198,
-              "inStock": true,
-              "tags": [
-                "organic",
-                "Healthy",
-                "energy"
-              ],
-              "cartId": 1759549794046,
-              "quantity": 1,
-              "addedAt": "2025-10-04T03:49:54.046Z"
-            }
-          ],
-          "totalAmount": 4.059,
-          "status": "Success",
-          "shippingAddress": {
-            "street": "123 Main St",
-            "city": "Your City",
-            "state": "Your State",
-            "zipCode": "12345"
-          }
-        },
-        {
-          "id": "order_1759560345413_k46pcp7t7",
-          "orderDate": "2025-10-04T06:45:45.413Z",
-          "items": [
-            {
-              " id": 22,
-              "name": "Fresh Apples",
-              "price": 2.99,
-              "category": "fruits",
-              "image": "https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=400",
-              "description": "Fresh red apples, perfect for snacking",
-              "nutrition": {
-                "calories": "165 kcal",
-                "protein": "31g",
-                "fat": "3.6g",
-                "carbs": "0g",
-                "vitamins": "B6, B12"
-              },
-              "rating": 4.5,
-              "reviews": 128,
-              "inStock": true,
-              "isFeatured": true,
-              "cartId": 1759560338533,
-              "quantity": 1,
-              "addedAt": "2025-10-04T06:45:38.533Z"
+              "addedAt": "2025-10-11T04:51:34.473Z"
             },
             {
-              "id": 15,
-              "name": "Fresh Kiwi",
-              "price": 6.99,
-              "originalPrice": 3.49,
-              "image": "https://i.pinimg.com/736x/23/82/1a/23821aff7c9e68e1357ef57327723b51.jpg",
-              "category": "fruits",
-              "unit": "per lb",
-              "description": "Fresh red apples, perfect for snacking",
-              "nutrition": {
-                "calories": "52 kcal",
-                "protein": "0.3g",
-                "fat": "0.2g",
-                "carbs": "14g",
-                "vitamins": "Vitamin C, Fiber"
-              },
-              "rating": 4.6,
-              "reviews": 278,
-              "inStock": true,
-              "isFeatured": true,
-              "tags": [
-                "fresh",
-                "fiber",
-                "crunchy"
-              ],
-              "cartId": 1759560339701,
-              "quantity": 1,
-              "addedAt": "2025-10-04T06:45:39.701Z"
-            }
-          ],
-          "totalAmount": 10.978000000000002,
-          "status": "Success",
-          "shippingAddress": {
-            "street": "123 Main St",
-            "city": "Your City",
-            "state": "Your State",
-            "zipCode": "12345"
-          }
-        },
-        {
-          "id": "order_1759560380546_trsg9zd33",
-          "orderDate": "2025-10-04T06:46:20.546Z",
-          "items": [
-            {
-              "id": 12,
-              "name": "Greek Yogurt",
-              "price": 3.49,
-              "image": "https://i.pinimg.com/736x/0d/8c/5d/0d8c5d0f03b8bbc17ed35b356bb78085.jpg",
-              "category": "dairy",
-              "unit": "32 oz",
-              "description": "Creamy Greek yogurt, high in protein",
-              "nutrition": {
-                "calories": "100 kcal",
-                "protein": "18g",
-                "fat": "0g",
-                "carbs": "6g",
-                "vitamins": "Calcium, Probiotics"
-              },
-              "rating": 4.6,
-              "reviews": 189,
-              "inStock": true,
-              "tags": [
-                "protein",
-                "probiotics",
-                "healthy"
-              ],
-              "cartId": 1759560362144,
-              "quantity": 1,
-              "addedAt": "2025-10-04T06:46:02.144Z"
-            },
-            {
-              "id": 24,
-              "name": "Fresh WaterMelone Juice",
-              "price": 1.69,
-              "image": "https://i.pinimg.com/1200x/48/14/b8/4814b8324e17030e35507ef3183d8c78.jpg",
-              "category": "Beverages & Snacks",
-              "unit": "per lb",
-              "description": "Refreshing red slush WaterMelon Juice in a clear cup with a straw, perfect for summer moments.",
-              "nutrition": {
-                "calories": "89 kcal",
-                "protein": "1.1g",
-                "fat": "0.3g",
-                "carbs": "23g",
-                "vitamins": "Potassium, Vitamin B6"
-              },
-              "rating": 4.5,
-              "reviews": 198,
-              "inStock": true,
-              "tags": [
-                "organic",
-                "Healthy",
-                "energy"
-              ],
-              "cartId": 1759560363216,
-              "quantity": 1,
-              "addedAt": "2025-10-04T06:46:03.216Z"
-            }
-          ],
-          "totalAmount": 5.698,
-          "status": "Success",
-          "shippingAddress": {
-            "street": "123 Main St",
-            "city": "Your City",
-            "state": "Your State",
-            "zipCode": "12345"
-          }
-        },
-        {
-          "id": "order_1759560426288_2lat2jmj3",
-          "orderDate": "2025-10-04T06:47:06.288Z",
-          "items": [
-            {
-              " id": 22,
-              "name": "Fresh Apples",
-              "price": 2.99,
-              "category": "fruits",
-              "image": "https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=400",
-              "description": "Fresh red apples, perfect for snacking",
-              "nutrition": {
-                "calories": "165 kcal",
-                "protein": "31g",
-                "fat": "3.6g",
-                "carbs": "0g",
-                "vitamins": "B6, B12"
-              },
-              "rating": 4.5,
-              "reviews": 128,
-              "inStock": true,
-              "isFeatured": true,
-              "cartId": 1759560418814,
-              "quantity": 1,
-              "addedAt": "2025-10-04T06:46:58.814Z"
-            }
-          ],
-          "totalAmount": 3.2890000000000006,
-          "status": "Success",
-          "shippingAddress": {
-            "street": "123 Main St",
-            "city": "Your City",
-            "state": "Your State",
-            "zipCode": "12345"
-          }
-        },
-        {
-          "id": "order_1759560479165_41mgm5039",
-          "orderDate": "2025-10-04T06:47:59.165Z",
-          "items": [
-            {
-              "id": 28,
-              "name": "7Eleven Chips",
-              "price": 1.69,
-              "image": "https://i.pinimg.com/736x/9b/30/c5/9b30c56fdd77c11fc237d0f07e7629d2.jpg",
-              "category": "Beverages & Snacks",
-              "unit": "per lb",
-              "description": "Convenient, flavorful snack chips available in a variety of tastes, perfect for on-the-go munching",
-              "nutrition": {
-                "calories": "89 kcal",
-                "protein": "1.1g",
-                "fat": "0.3g",
-                "carbs": "23g",
-                "vitamins": "Potassium, Vitamin B6"
-              },
-              "rating": 4.5,
-              "reviews": 198,
-              "inStock": true,
-              "tags": [
-                "organic",
-                "Healthy",
-                "energy"
-              ],
-              "cartId": 1759560464138,
-              "quantity": 1,
-              "addedAt": "2025-10-04T06:47:44.138Z"
-            },
-            {
-              "id": 26,
-              "name": "Avacado Smoothie",
-              "price": 3.69,
-              "image": "https://i.pinimg.com/1200x/96/c0/fc/96c0fc6dd3d87abd3e6f747dc8d11964.jpg",
-              "category": "Beverages & Snacks",
-              "unit": "per lb",
-              "description": " Creamy, nutritious, and naturally sweet - a refreshing and healthy drink.",
-              "nutrition": {
-                "calories": "89 kcal",
-                "protein": "1.1g",
-                "fat": "0.3g",
-                "carbs": "23g",
-                "vitamins": "Potassium, Vitamin B6"
-              },
-              "rating": 4.5,
-              "reviews": 198,
-              "inStock": true,
-              "tags": [
-                "organic",
-                "Healthy",
-                "energy"
-              ],
-              "cartId": 1759560465121,
-              "quantity": 1,
-              "addedAt": "2025-10-04T06:47:45.121Z"
-            },
-            {
-              "id": 20,
-              "name": "Avocados",
-              "price": 2.49,
-              "originalPrice": 2.99,
-              "image": "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?w=400",
-              "category": "fruits",
-              "unit": "each",
-              "description": "Hass avocados, perfectly ripe",
-              "nutrition": {
-                "calories": "160 kcal",
-                "protein": "2g",
-                "fat": "15g",
-                "carbs": "9g",
-                "vitamins": "Healthy Fats, Fiber"
-              },
-              "rating": 4.6,
-              "reviews": 245,
-              "inStock": true,
-              "tags": [
-                "healthy-fats",
-                "creamy",
-                "ripe"
-              ],
-              "cartId": 1759560466383,
-              "quantity": 1,
-              "addedAt": "2025-10-04T06:47:46.383Z"
-            },
-            {
-              "id": 25,
+              "id": "25",
               "name": "Berry Smoothie",
               "price": 1.69,
               "image": "https://i.pinimg.com/736x/89/f0/99/89f0996c697f5a8e6fce12981655871e.jpg",
@@ -579,129 +230,29 @@
                 "Healthy",
                 "energy"
               ],
-              "cartId": 1759560467536,
+              "cartId": 1760158295765,
               "quantity": 1,
-              "addedAt": "2025-10-04T06:47:47.536Z"
-            },
-            {
-              "id": 14,
-              "name": "Broccoli",
-              "price": 1.99,
-              "originalPrice": 2.49,
-              "image": "https://i.pinimg.com/1200x/76/3f/15/763f15338920291403be39c14dac8d92.jpg",
-              "category": "vegetables",
-              "unit": "per lb",
-              "description": "Fresh green broccoli florets",
-              "nutrition": {
-                "calories": "34 kcal",
-                "protein": "2.8g",
-                "fat": "0.4g",
-                "carbs": "7g",
-                "vitamins": "Vitamin C, Vitamin K"
-              },
-              "rating": 4.3,
-              "reviews": 134,
-              "inStock": true,
-              "tags": [
-                "vitamin-c",
-                "fiber",
-                "green"
-              ],
-              "cartId": 1759560469647,
-              "quantity": 1,
-              "addedAt": "2025-10-04T06:47:49.647Z"
-            },
-            {
-              "id": 17,
-              "name": "California Strawberries",
-              "price": 4.99,
-              "originalPrice": 5.99,
-              "image": "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=400",
-              "category": "fruits",
-              "unit": "1 lb container",
-              "description": "Sweet and juicy California strawberries",
-              "nutrition": {
-                "calories": "32 kcal",
-                "protein": "0.7g",
-                "fat": "0.3g",
-                "carbs": "7.7g",
-                "vitamins": "Vitamin C, Antioxidants"
-              },
-              "rating": 4.7,
-              "reviews": 223,
-              "inStock": true,
-              "isFeatured": true,
-              "tags": [
-                "sweet",
-                "vitamin-c",
-                "juicy"
-              ],
-              "cartId": 1759560470775,
-              "quantity": 1,
-              "addedAt": "2025-10-04T06:47:50.775Z"
+              "addedAt": "2025-10-11T04:51:35.765Z"
             }
           ],
-          "totalAmount": 18.194,
-          "status": "Success",
-          "shippingAddress": {
-            "street": "123 Main St",
-            "city": "Your City",
-            "state": "Your State",
-            "zipCode": "12345"
-          }
-        },
-        {
-          "id": "order_1759561830440_wxxe1oq7w",
-          "orderDate": "2025-10-04T07:10:30.440Z",
-          "items": [
-            {
-              "id": 17,
-              "name": "California Strawberries",
-              "price": 4.99,
-              "originalPrice": 5.99,
-              "image": "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=400",
-              "category": "fruits",
-              "unit": "1 lb container",
-              "description": "Sweet and juicy California strawberries",
-              "nutrition": {
-                "calories": "32 kcal",
-                "protein": "0.7g",
-                "fat": "0.3g",
-                "carbs": "7.7g",
-                "vitamins": "Vitamin C, Antioxidants"
-              },
-              "rating": 4.7,
-              "reviews": 223,
-              "inStock": true,
-              "isFeatured": true,
-              "tags": [
-                "sweet",
-                "vitamin-c",
-                "juicy"
-              ],
-              "cartId": 1759561824815,
-              "quantity": 1,
-              "addedAt": "2025-10-04T07:10:24.815Z"
-            }
-          ],
-          "totalAmount": 5.489000000000001,
+          "totalAmount": 8.657,
           "status": "Success"
         },
         {
-          "id": "order_1759568012545_mouhnwuzi",
-          "orderDate": "2025-10-04T08:53:32.545Z",
+          "id": "order_1760165214734_4tsj4rrae",
+          "orderDate": "2025-10-11T06:46:54.734Z",
           "items": [
             {
-              "id": 26,
-              "name": "Avacado Smoothie",
-              "price": 3.69,
-              "image": "https://i.pinimg.com/1200x/96/c0/fc/96c0fc6dd3d87abd3e6f747dc8d11964.jpg",
-              "category": "Beverages & Snacks",
+              "id": "31",
+              "name": "Fresh Lamp Meat",
+              "price": 7.69,
+              "image": "https://i.pinimg.com/736x/32/c0/ca/32c0ca128f520af554642ca0853f5833.jpg",
+              "category": "meat",
               "unit": "per lb",
-              "description": " Creamy, nutritious, and naturally sweet - a refreshing and healthy drink.",
+              "description": "Refreshing red slush WaterMelon Juice in a clear cup with a straw, perfect for summer moments.",
               "nutrition": {
                 "calories": "89 kcal",
-                "protein": "1.1g",
+                "protein": "29.1g",
                 "fat": "0.3g",
                 "carbs": "23g",
                 "vitamins": "Potassium, Vitamin B6"
@@ -709,115 +260,169 @@
               "rating": 4.5,
               "reviews": 198,
               "inStock": true,
-              "tags": [
-                "organic",
-                "Healthy",
-                "energy"
-              ],
-              "cartId": 1759568000882,
-              "quantity": 4,
-              "addedAt": "2025-10-04T08:53:20.882Z"
+              "cartId": 1760165206493,
+              "quantity": 1,
+              "addedAt": "2025-10-11T06:46:46.494Z"
             }
           ],
-          "totalAmount": 16.236,
-          "status": "Success",
-          "shippingAddress": {
-            "street": "123 Main St",
-            "city": "Your City",
-            "state": "Your State",
-            "zipCode": "12345"
-          }
+          "totalAmount": 8.459000000000001,
+          "status": "Success"
+        },
+        {
+          "id": "order_1760165228976_h1oke9qwf",
+          "orderDate": "2025-10-11T06:47:08.976Z",
+          "items": [
+            {
+              "id": "10",
+              "name": "Ground Beef",
+              "price": "350",
+              "image": "https://i.pinimg.com/1200x/8d/7d/7f/8d7d7f1c4ce9294370ffab6f5ef90e80.jpg",
+              "category": "meat",
+              "unit": "per lb",
+              "description": "80/20 lean ground beef for burgers and recipes",
+              "rating": 4.3,
+              "reviews": 95,
+              "inStock": true,
+              "cartId": 1760165222942,
+              "quantity": 1,
+              "addedAt": "2025-10-11T06:47:02.942Z"
+            }
+          ],
+          "totalAmount": 385.00000000000006,
+          "status": "Success"
+        },
+        {
+          "id": "order_1760165239346_ysps4q1ch",
+          "orderDate": "2025-10-11T06:47:19.346Z",
+          "items": [
+            {
+              "id": "18",
+              "name": "Seedless Grapes",
+              "price": "210",
+              "originalPrice": 4.29,
+              "image": "https://i.pinimg.com/1200x/bb/39/12/bb3912b6a7bf8e4906a95debbd34f21c.jpg",
+              "category": "fruits",
+              "unit": "per lb",
+              "description": "Sweet red seedless grapes",
+              "rating": 4.4,
+              "reviews": 167,
+              "inStock": true,
+              "cartId": 1760165234719,
+              "quantity": 1,
+              "addedAt": "2025-10-11T06:47:14.719Z"
+            }
+          ],
+          "totalAmount": 231.00000000000003,
+          "status": "Success"
+        },
+        {
+          "id": "order_1760165250415_n4uyt0m25",
+          "orderDate": "2025-10-11T06:47:30.415Z",
+          "items": [
+            {
+              "id": "7",
+              "name": "Red Chilly",
+              "price": "55",
+              "category": "vegetables",
+              "image": "https://i.pinimg.com/736x/68/d8/ed/68d8ed047b251378595b89d121948ee8.jpg",
+              "description": "Fresh Red Hot Cilly, 100g",
+              "rating": 4.5,
+              "reviews": 128,
+              "inStock": true,
+              "isFeatured": true,
+              "cartId": 1760165245445,
+              "quantity": 1,
+              "addedAt": "2025-10-11T06:47:25.445Z"
+            }
+          ],
+          "totalAmount": 60.50000000000001,
+          "status": "Success"
         }
       ]
     },
     {
-      "id": "bec6",
-      "name": "nabhan",
-      "email": "nabu@gmail.com",
-      "password": "zxcvbnm",
+      "id": "f357",
+      "name": "muhammed Nabhan",
+      "email": "mhdnabhan009@gmail.com",
+      "password": "avilmilk30",
       "cart": [],
       "wishlist": [],
       "isLoggedIn": true,
-      "isBlock": false
-    },
-    {
-      "id": "45d7",
-      "name": "zinan",
-      "email": "zinan@gmail.com",
-      "password": "123456",
-      "cart": [
-        {
-          "id": 30,
-          "name": "Salmon Steak",
-          "price": 8.69,
-          "image": "https://i.pinimg.com/1200x/3f/d3/75/3fd375886a6ec0dde253741147274392.jpg",
-          "category": "meat",
-          "unit": "per lb",
-          "description": "Juicy, tender Salmo steak, perfectly seared and packed with rich, savory flavor for an unforgettable meal.",
-          "nutrition": {
-            "calories": "89 kcal",
-            "protein": "12.1g",
-            "fat": "0.3g",
-            "carbs": "20g",
-            "vitamins": "Potassium, Vitamin B6"
-          },
-          "rating": 4.5,
-          "reviews": 198,
-          "inStock": true,
-          "tags": [
-            "organic",
-            "Healthy",
-            "energy"
-          ],
-          "cartId": 1759750751956,
-          "quantity": 1,
-          "addedAt": "2025-10-06T11:39:11.956Z"
-        }
-      ],
-      "wishlist": [],
-      "isLoggedIn": true,
+      "role": "admin",
       "isBlock": false,
       "orders": [
         {
-          "id": "order_1759749382593_9ajag0imm",
-          "orderDate": "2025-10-06T11:16:22.593Z",
+          "id": "order_1760165113264_3kfs7t6m3",
+          "orderDate": "2025-10-11T06:45:13.264Z",
           "items": [
             {
-              "id": 26,
-              "name": "Avacado Smoothie",
-              "price": 3.69,
-              "image": "https://i.pinimg.com/1200x/96/c0/fc/96c0fc6dd3d87abd3e6f747dc8d11964.jpg",
-              "category": "Beverages & Snacks",
+              " id": 8,
+              "name": "Chicken Breast",
+              "price": "250",
+              "image": "https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=400",
+              "category": "meat",
               "unit": "per lb",
-              "description": " Creamy, nutritious, and naturally sweet - a refreshing and healthy drink.",
-              "nutrition": {
-                "calories": "89 kcal",
-                "protein": "1.1g",
-                "fat": "0.3g",
-                "carbs": "23g",
-                "vitamins": "Potassium, Vitamin B6"
-              },
+              "description": "Fresh, boneless chicken breast - perfect for grilling or baking",
               "rating": 4.5,
               "reviews": 198,
               "inStock": true,
-              "tags": [
-                "organic",
-                "Healthy",
-                "energy"
-              ],
-              "cartId": 1759749358585,
+              "id": "83c8",
+              "cartId": 1760165108272,
               "quantity": 1,
-              "addedAt": "2025-10-06T11:15:58.585Z"
+              "addedAt": "2025-10-11T06:45:08.272Z"
             }
           ],
-          "totalAmount": 4.059,
-          "status": "Success",
-          "shippingAddress": {
-            "street": "123 Main St",
-            "city": "Your City",
-            "state": "Your State",
-            "zipCode": "12345"
-          }
+          "totalAmount": 275,
+          "status": "Success"
+        },
+        {
+          "id": "order_1760165123676_4zngt5kc3",
+          "orderDate": "2025-10-11T06:45:23.676Z",
+          "items": [
+            {
+              "id": "17",
+              "name": "California Strawberries",
+              "price": "230",
+              "originalPrice": 5.99,
+              "image": "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=400",
+              "category": "fruits",
+              "unit": "1 lb container",
+              "description": "Sweet and juicy California strawberries",
+              "rating": 4.7,
+              "reviews": 223,
+              "inStock": true,
+              "isFeatured": true,
+              "cartId": 1760165119062,
+              "quantity": 1,
+              "addedAt": "2025-10-11T06:45:19.062Z"
+            }
+          ],
+          "totalAmount": 253.00000000000003,
+          "status": "Success"
+        },
+        {
+          "id": "order_1760165134476_7y5ru1p8a",
+          "orderDate": "2025-10-11T06:45:34.476Z",
+          "items": [
+            {
+              "id": "13",
+              "name": "Dragon Fruit",
+              "price": "149",
+              "image": "https://i.pinimg.com/736x/86/fd/06/86fd0698d430c13b96a65da24ad2903e.jpg",
+              "category": "fruits",
+              "unit": "per lb",
+              "description": "A vibrant, exotic fruit with a sweet, mildly tangy flavor and crunchy seeds,",
+              "rating": 4.4,
+              "reviews": 167,
+              "inStock": true,
+              "isFeatured": true,
+              "cartId": 1760165129549,
+              "quantity": 1,
+              "addedAt": "2025-10-11T06:45:29.549Z"
+            }
+          ],
+          "totalAmount": 163.9,
+          "status": "Success"
         }
       ]
     }
@@ -826,7 +431,7 @@
     {
       " id": 22,
       "name": "Fresh Apples",
-      "price": 2.99,
+      "price": "220",
       "category": "fruits",
       "image": "https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=400",
       "description": "Fresh red apples, perfect for snacking",
@@ -839,7 +444,7 @@
     {
       "id": "1",
       "name": "Organic Bananas",
-      "price": 1.49,
+      "price": "40",
       "category": "fruits",
       "image": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=400",
       "description": "Organic ripe bananas",
@@ -850,7 +455,7 @@
     {
       "id": "2",
       "name": "Carrots",
-      "price": 1.99,
+      "price": "69",
       "category": "vegetables",
       "image": "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?w=400",
       "description": "Fresh organic carrots",
@@ -861,7 +466,7 @@
     {
       "id": "3",
       "name": "Green Apple",
-      "price": 3.49,
+      "price": "129",
       "category": "fruits",
       "image": "https://i.pinimg.com/736x/34/b7/7a/34b77a0e46a76592eb557f3d0e9354f0.jpg",
       "description": "Fresh green Aplle",
@@ -873,7 +478,7 @@
     {
       "id": "4",
       "name": "Fresh Tomato",
-      "price": 3.49,
+      "price": "33",
       "category": "vegetables",
       "image": "https://i.pinimg.com/736x/dd/a7/df/dda7dfe31530b346cc694e40843e35de.jpg",
       "description": "Fresh, juicy, and rich in flavor - perfect for salads and cooking",
@@ -897,7 +502,7 @@
     {
       "id": "6",
       "name": "Whole Wheat Bread",
-      "price": 2.99,
+      "price": "44",
       "category": "dairy",
       "image": "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=400",
       "description": "Fresh whole wheat bread",
@@ -909,7 +514,7 @@
     {
       "id": "7",
       "name": "Red Chilly",
-      "price": 1.99,
+      "price": "55",
       "category": "vegetables",
       "image": "https://i.pinimg.com/736x/68/d8/ed/68d8ed047b251378595b89d121948ee8.jpg",
       "description": "Fresh Red Hot Cilly, 100g",
@@ -921,7 +526,7 @@
     {
       " id": 8,
       "name": "Chicken Breast",
-      "price": 8.99,
+      "price": "250",
       "image": "https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=400",
       "category": "meat",
       "unit": "per lb",
@@ -934,7 +539,7 @@
     {
       "id": "9",
       "name": "Orange",
-      "price": 8.99,
+      "price": "85",
       "image": "https://i.pinimg.com/736x/47/35/15/4735157a49a3ae185b38ab98623caa0c.jpg",
       "category": "fruits",
       "unit": "per lb",
@@ -947,7 +552,7 @@
     {
       "id": "10",
       "name": "Ground Beef",
-      "price": 6.49,
+      "price": "350",
       "image": "https://i.pinimg.com/1200x/8d/7d/7f/8d7d7f1c4ce9294370ffab6f5ef90e80.jpg",
       "category": "meat",
       "unit": "per lb",
@@ -959,7 +564,7 @@
     {
       "id": "11",
       "name": "Organic Milk",
-      "price": 4.99,
+      "price": "53",
       "image": "https://images.unsplash.com/photo-1563636619-e9143da7973b?w=400",
       "category": "dairy",
       "unit": "1 gallon",
@@ -972,7 +577,7 @@
     {
       "id": "12",
       "name": "Greek Yogurt",
-      "price": 3.49,
+      "price": "60",
       "image": "https://i.pinimg.com/736x/0d/8c/5d/0d8c5d0f03b8bbc17ed35b356bb78085.jpg",
       "category": "dairy",
       "unit": "32 oz",
@@ -984,7 +589,7 @@
     {
       "id": "13",
       "name": "Dragon Fruit",
-      "price": 2.49,
+      "price": "149",
       "image": "https://i.pinimg.com/736x/86/fd/06/86fd0698d430c13b96a65da24ad2903e.jpg",
       "category": "fruits",
       "unit": "per lb",
@@ -997,7 +602,7 @@
     {
       "id": "14",
       "name": "Broccoli",
-      "price": 1.99,
+      "price": "44",
       "originalPrice": 2.49,
       "image": "https://i.pinimg.com/1200x/76/3f/15/763f15338920291403be39c14dac8d92.jpg",
       "category": "vegetables",
@@ -1010,7 +615,7 @@
     {
       "id": "15",
       "name": "Fresh Kiwi",
-      "price": 6.99,
+      "price": "73",
       "originalPrice": 3.49,
       "image": "https://i.pinimg.com/736x/23/82/1a/23821aff7c9e68e1357ef57327723b51.jpg",
       "category": "fruits",
@@ -1024,7 +629,7 @@
     {
       "id": "16",
       "name": "Fresh Orange Juice",
-      "price": 0.69,
+      "price": "90",
       "image": "https://i.pinimg.com/1200x/45/07/fd/4507fdad6d96271af132d1f007863f09.jpg",
       "category": "Beverages & Snacks",
       "unit": "per lb",
@@ -1036,7 +641,7 @@
     {
       "id": "17",
       "name": "California Strawberries",
-      "price": 4.99,
+      "price": "230",
       "originalPrice": 5.99,
       "image": "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=400",
       "category": "fruits",
@@ -1050,7 +655,7 @@
     {
       "id": "18",
       "name": "Seedless Grapes",
-      "price": 3.49,
+      "price": "210",
       "originalPrice": 4.29,
       "image": "https://i.pinimg.com/1200x/bb/39/12/bb3912b6a7bf8e4906a95debbd34f21c.jpg",
       "category": "fruits",

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import api from '../Api/Api';
+import Navbar from '../component/Navbar';
+import Footer from '../component/Footer';
 
 const Orders = () => {
   const { user } = useAuth();
@@ -10,13 +12,13 @@ const Orders = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       if (!user) return;
-      
+
       try {
         const { data: userData } = await api.get(`/users/${user.id}`);
         setOrders(userData.orders || []);
-        setLoading(false);
       } catch (err) {
         console.error('Error fetching orders:', err);
+      } finally {
         setLoading(false);
       }
     };
@@ -25,6 +27,7 @@ const Orders = () => {
   }, [user]);
 
   const formatDate = (dateString) => {
+    if (!dateString) return "N/A";
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
@@ -36,11 +39,14 @@ const Orders = () => {
 
   const getStatusColor = (status) => {
     switch (status) {
-      // case 'delivered': return 'bg-green-100 text-green-800';
-      // case 'shipped': return 'bg-blue-100 text-blue-800';
-      // case 'processing': return 'bg-green-100 text-black-800';
-      // case 'cancelled': return 'bg-red-100 text-red-800';
-      default:case 'success' : return 'bg-gray-100 text-gray-800';
+      case 'success':
+        return 'bg-green-100 text-green-800';
+      case 'pending':
+        return 'bg-yellow-100 text-yellow-800';
+      case 'failed':
+        return 'bg-red-100 text-red-800';
+      default:
+        return 'bg-gray-100 text-gray-800';
     }
   };
 
@@ -93,7 +99,7 @@ const Orders = () => {
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                     <div>
                       <h3 className="text-lg font-semibold text-gray-800">
-                        Order #{order.id.slice(-8).toUpperCase()}
+                        Order #{String(order.id).slice(-8).toUpperCase()}
                       </h3>
                       <p className="text-gray-600 text-sm mt-1">
                         Placed on {formatDate(order.orderDate)}
@@ -101,16 +107,18 @@ const Orders = () => {
                     </div>
                     <div className="flex items-center gap-4 mt-2 md:mt-0">
                       <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(order.status)}`}>
-                        {order.status.charAt(0).toUpperCase() + order.status.slice(1)}
+                        {order.status
+                          ? order.status.charAt(0).toUpperCase() + order.status.slice(1)
+                          : "Pending"}
                       </span>
                       <span className="text-xl font-bold text-green-600">
-                        ${order.totalAmount.toFixed(2)}
+                        ${order.totalAmount?.toFixed(2) || "0.00"}
                       </span>
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
-                    {order.items.slice(0, 4).map((item, index) => (
+                    {order.items?.slice(0, 4).map((item, index) => (
                       <div key={index} className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
                         <img
                           src={item.image}
@@ -124,17 +132,14 @@ const Orders = () => {
                         <p className="font-semibold text-green-600">${item.price}</p>
                       </div>
                     ))}
-                    {order.items.length > 4 && (
+
+                    {order.items && order.items.length > 4 && (
                       <div className="flex items-center justify-center p-3 bg-gray-100 rounded-lg">
-                        <p className="text-gray-600 text-sm">+{order.items.length - 4} more items</p>
+                        <p className="text-gray-600 text-sm">
+                          +{order.items.length - 4} more items
+                        </p>
                       </div>
                     )}
-                  </div>
-
-                  <div className="flex justify-between items-center pt-4 border-t border-gray-200">
-                    {/* <div className="text-sm text-gray-600">
-                      {order.items.length} items • {order.shippingAddress.city}, {order.shippingAddress.state}
-                    </div> */}
                   </div>
                 </div>
               ))}

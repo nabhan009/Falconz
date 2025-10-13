@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { MagnifyingGlassIcon, HeartIcon, ShoppingBagIcon, UserIcon, Bars3Icon } from '@heroicons/react/24/outline';
 import { useAuth } from '../context/AuthContext';
@@ -7,15 +6,14 @@ const Navbar = () => {
   const {
     user,
     logout,
-    wishlistCount,
     cartCount,
+    wishlistCount,
     profileOpen,
     setProfileOpen,
     mobileMenuOpen,
     setMobileMenuOpen,
   } = useAuth();
 
-  const [searchQuery, setSearchQuery] = useState('');
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -25,14 +23,6 @@ const Navbar = () => {
     { name: 'About', path: '/About' },
     { name: 'Contact', path: '/contact' }
   ];
-
-  const handleSearch = (e) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
-      setSearchQuery('');
-    }
-  };
 
   const navClass = (path) =>
     `transition-all duration-300 font-medium px-4 py-2 rounded-lg ${
@@ -63,18 +53,6 @@ const Navbar = () => {
 
           {/* Right Icons */}
           <div className="flex items-center space-x-3">
-            {/* Desktop Search */}
-            <form onSubmit={handleSearch} className="hidden md:block relative">
-              <input
-                type="text"
-                placeholder="Search..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-64 pl-10 pr-4 py-2 rounded-xl bg-gray-100 text-gray-700 placeholder-gray-400 border focus:border-green-500 focus:outline-none"
-              />
-              <MagnifyingGlassIcon className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
-            </form>
-
             {/* Wishlist */}
             <button onClick={() => navigate('/wishList')} className="relative p-2 rounded-full hover:bg-green-100">
               <HeartIcon className="h-6 w-6 text-green-600" />
@@ -127,9 +105,7 @@ const Navbar = () => {
                 Order History
               </button>
               <button
-                onClick={()=>{logout
-                    navigate('/login')
-                }}
+                onClick={logout}
                 className="w-full bg-red-500 text-white py-2 mt-2 rounded-lg text-sm hover:bg-red-600"
               >
                 Logout
@@ -146,6 +122,45 @@ const Navbar = () => {
               </button>
             </div>
           )}
+        </div>
+      )}
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="lg:hidden bg-white shadow-md border-t">
+          <div className="flex flex-col space-y-2 p-4">
+            {links.map(link => (
+              <Link
+                key={link.path}
+                to={link.path}
+                onClick={() => setMobileMenuOpen(false)}
+                className={`block px-3 py-2 rounded-md text-base font-medium ${
+                  location.pathname === link.path
+                    ? 'bg-[#4CBB17] text-white'
+                    : 'text-[#4CBB17] hover:bg-[#48872B] hover:text-white'
+                }`}
+              >
+                {link.name}
+              </Link>
+            ))}
+
+            {/* Extra buttons for mobile */}
+            <button
+              onClick={() => { navigate('/Cart'); setMobileMenuOpen(false); }}
+              className="flex items-center gap-2 px-3 py-2 text-[#4CBB17] hover:bg-green-100 rounded-md"
+            >
+              <ShoppingBagIcon className="h-5 w-5" />
+              Cart ({cartCount})
+            </button>
+
+            <button
+              onClick={() => { navigate('/wishList'); setMobileMenuOpen(false); }}
+              className="flex items-center gap-2 px-3 py-2 text-[#4CBB17] hover:bg-green-100 rounded-md"
+            >
+              <HeartIcon className="h-5 w-5" />
+              Wishlist ({wishlistCount})
+            </button>
+          </div>
         </div>
       )}
     </>

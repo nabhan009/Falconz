@@ -49,6 +49,7 @@ function SignUp() {
         cart: [],
         wishlist: [],
         isLoggedIn: true,
+        role : "User",
         isBlock: false
       });
 

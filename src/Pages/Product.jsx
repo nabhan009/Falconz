@@ -3,6 +3,8 @@ import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { FaHeart, FaRegHeart, FaCartPlus, FaArrowLeft, FaStar, FaShare, FaMinus, FaPlus } from 'react-icons/fa';
 import { useAuth } from '../context/AuthContext';
 import api from '../Api/Api';
+import Footer from '../component/Footer';
+import Navbar from '../component/Navbar';
 
 function Product() {
   const { id } = useParams();
@@ -203,7 +205,7 @@ function Product() {
 
             <div>
               <h2 className="text-3xl font-bold text-green-600 mb-4">
-                ${typeof product.price === 'number' ? product.price.toFixed(2) : parseFloat(product.price || 0).toFixed(2)}
+                ₹{typeof product.price === 'number' ? product.price.toFixed(2) : parseFloat(product.price || 0).toFixed(2)}
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed">
                 {product.description || "No description available for this product."}
@@ -230,7 +232,7 @@ function Product() {
                   </button>
                 </div>
                 <div className="text-lg font-semibold text-gray-700">
-                  Total: ${((typeof product.price === 'number' ? product.price : parseFloat(product.price || 0)) * quantity).toFixed(2)}
+                  Total: ₹{((typeof product.price === 'number' ? product.price : parseFloat(product.price || 0)) * quantity).toFixed(2)}
                 </div>
               </div>
             </div>

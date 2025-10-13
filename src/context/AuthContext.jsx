@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import api from "../Api/Api";
+import { toast } from "react-toastify";
 
 export const AuthContext = createContext();
 
@@ -23,26 +24,27 @@ export const AuthProvider = ({ children }) => {
     setLoading(false);
   }, []);
 
-  // ✅ Login function
+  // ✅ Login function (no navigation here)
   const login = async (email, password) => {
     const { data } = await api.get("/users", { params: { email } });
-    const user = data[0];
+    const foundUser = data[0];
 
-    if (!user) throw new Error("User not found");
-    if (user.password !== password) throw new Error("Invalid password");
-    if (user.isBlock) throw new Error("Account is blocked");
+    if (!foundUser) throw new Error("User not found");
+    if (foundUser.password !== password) throw new Error("Invalid password");
+    if (foundUser.isBlock) throw new Error("Account is blocked");
 
-    const updatedUser = { ...user, isLoggedIn: true };
-    await api.patch(`/users/${user.id}`, updatedUser);
+    const updatedUser = { ...foundUser, isLoggedIn: true };
+    await api.patch(`/users/${foundUser.id}`, updatedUser);
 
     localStorage.setItem("loggedInUser", JSON.stringify(updatedUser));
     localStorage.setItem("userId", updatedUser.id);
-
     setUser(updatedUser);
-    return updatedUser;
+    toast.success("Login successful!");
+
+    return updatedUser; // ✅ return the logged-in user
   };
 
-  // ✅ Logout function
+  // Logout function
   const logout = async () => {
     if (user?.id) {
       await api.patch(`/users/${user.id}`, { isLoggedIn: false });
@@ -50,46 +52,43 @@ export const AuthProvider = ({ children }) => {
     localStorage.removeItem("loggedInUser");
     localStorage.removeItem("userId");
     setUser(null);
-    setProfileOpen(false);
+    toast.warning("Logout successful");
   };
 
-  // ✅ Update user for cart/wishlist
+  // Update user for wishlist/cart
   const updateUser = (updatedUserData) => {
     localStorage.setItem("loggedInUser", JSON.stringify(updatedUserData));
     setUser(updatedUserData);
   };
 
-  // ✅ Counts
   const wishlistCount = user?.wishlist?.length || 0;
   const cartCount = user?.cart?.length || 0;
 
-  const value = {
-    user,
-    login,
-    logout,
-    updateUser,
-    wishlistCount,
-    cartCount,
-    profileOpen,
-    setProfileOpen,
-    mobileMenuOpen,
-    setMobileMenuOpen,
-    loading,
-    isAuthenticated: !!user
-  };
-
   return (
-    <AuthContext.Provider value={value}>
+    <AuthContext.Provider
+      value={{
+        user,
+        login,
+        logout,
+        updateUser,
+        wishlistCount,
+        cartCount,
+        profileOpen,
+        setProfileOpen,
+        mobileMenuOpen,
+        setMobileMenuOpen,
+        loading,
+        isAuthenticated: !!user,
+      }}
+    >
       {children}
     </AuthContext.Provider>
   );
 };
 
-// ✅ Custom hook
+// Custom hook
 export const useAuth = () => {
   const context = useContext(AuthContext);
-  if (!context) {
-    throw new Error("useAuth must be used within an AuthProvider");
-  }
+  if (!context) throw new Error("useAuth must be used within an AuthProvider");
   return context;
 };

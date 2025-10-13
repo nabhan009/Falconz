@@ -12,14 +12,11 @@ const Wishlist = () => {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
-
+      if (!user) {
+      navigate('/login');
+    };
   // Fetch wishlist on mount or when user changes
   useEffect(() => {
-    if (!user) {
-        
-      navigate('/login');
-      return;
-    }
 
     const fetchWishlist = async () => {
       try {
@@ -281,7 +278,7 @@ const Wishlist = () => {
                   
                   <div className="flex justify-between items-center mb-4">
                     <span className="text-2xl font-bold text-green-600">
-                      ${typeof product.price === 'number' ? product.price.toFixed(2) : parseFloat(product.price || 0).toFixed(2)}
+                      ₹{typeof product.price === 'number' ? product.price.toFixed(2) : parseFloat(product.price || 0).toFixed(2)}
                     </span>
                     {product.stock && (
                       <span className={`text-sm font-medium ${

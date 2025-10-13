@@ -300,6 +300,8 @@
 
 import React, { useEffect, useState } from "react";
 import { UserIcon, ShoppingBagIcon, HeartIcon, EnvelopeIcon, PencilSquareIcon, CheckIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import Footer from "../component/Footer";
+import Navbar from "../component/Navbar";
 
 const ProfilePage = () => {
   const [user, setUser] = useState({
@@ -400,10 +402,6 @@ const ProfilePage = () => {
     }));
   };
 
-  // Calculate totals
-//   const cartItemCount = user.cart ? user.cart.length : 0;
-//   const wishlistItemCount = user.wishlist ? user.wishlist.length : 0;
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white flex flex-col items-center py-12 px-4">
       {/* Header */}
@@ -438,37 +436,6 @@ const ProfilePage = () => {
             
             </div>
           </div>
-
-          {/* Quick Stats
-          <div className="grid grid-cols-2 gap-4">
-            <div className="bg-white rounded-xl p-4 shadow-lg border border-gray-100">
-              <div className="flex items-center gap-3">
-                <div className="p-2 bg-emerald-100 rounded-lg">
-                  <ShoppingBagIcon className="h-5 w-5 text-emerald-600" />
-                </div>
-                <div>
-                  <div className="text-lg font-bold text-gray-800">
-                    {cartItemCount}
-                  </div>
-                  <div className="text-gray-500 text-xs">In Cart</div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-white rounded-xl p-4 shadow-lg border border-gray-100">
-              <div className="flex items-center gap-3">
-                <div className="p-2 bg-rose-100 rounded-lg">
-                  <HeartIcon className="h-5 w-5 text-rose-600" />
-                </div>
-                <div>
-                  <div className="text-lg font-bold text-gray-800">
-                    {wishlistItemCount}
-                  </div>
-                  <div className="text-gray-500 text-xs">Wishlisted</div>
-                </div>
-              </div>
-            </div>
-          </div> */}
         </div>
 
         {/* Account Details */}

@@ -6,6 +6,8 @@ import { useAuth } from '../context/AuthContext';
 import api from '../Api/Api';
 import Loader from '../../effects/Loading';
 import { toast } from 'react-toastify';
+import Footer from '../component/Footer';
+import Navbar from '../component/Navbar';
 
 
 function Shop() {
@@ -20,8 +22,6 @@ function Shop() {
   // Filter and sort states
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('name');
-  const [priceRange, setPriceRange] = useState([0, 100]);
-  const [showFilters, setShowFilters] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
 
   const navigate = useNavigate();
@@ -83,11 +83,6 @@ function Shop() {
       filtered = filtered.filter(product => product.category === selectedCategory);
     }
 
-    // Apply price range filter
-    filtered = filtered.filter(product => 
-      product.price >= priceRange[0] && product.price <= priceRange[1]
-    );
-
     // Apply search filter
     if (searchQuery.trim()) {
       filtered = filtered.filter(product =>
@@ -116,7 +111,7 @@ function Shop() {
     });
 
     setFilteredProducts(filtered);
-  }, [products, selectedCategory, sortBy, priceRange, searchQuery]);
+  }, [products, selectedCategory, sortBy, searchQuery]);
 
   // Show alert
   const showAlert = (message, type) => {
@@ -214,21 +209,15 @@ function Shop() {
   const resetFilters = () => {
     setSelectedCategory('all');
     setSortBy('name');
-    setPriceRange([0, 100]);
     setSearchQuery('');
   };
-
-  // Get max price for range slider
-  const maxPrice = products.length > 0 ? Math.ceil(Math.max(...products.map(p => p.price))) : 100;
 
   // Loading state with 2-second delay
   if (loading || showLoader) {
     return (
       <div className="min-h-screen flex justify-center items-center bg-gray-50">
         <div className="text-center">
-          <Loader />
-          <p className="mt-4 text-gray-600">Loading fresh products...</p>
-        </div>
+          <Loader />        </div>
       </div>
     );
   }
@@ -328,17 +317,6 @@ function Shop() {
         {/* Controls Bar */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-8">
           <div className="flex flex-wrap items-center gap-4">
-            <button
-              onClick={() => setShowFilters(!showFilters)}
-              className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
-                showFilters 
-                  ? 'bg-green-600 text-white shadow-lg' 
-                  : 'bg-white text-gray-700 border border-gray-300 hover:border-green-500'
-              }`}
-            >
-              <FaFilter className={`transition-transform duration-300 ${showFilters ? 'rotate-180' : ''}`} />
-              {showFilters ? 'Hide Filters' : 'Show Filters'}
-            </button>
             
             <div className="relative">
               <FaSort className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
@@ -370,78 +348,7 @@ function Shop() {
             </span>
           </div>
         </div>
-
-        {/* Expanded Filters */}
-        {showFilters && (
-          <div className="bg-white rounded-2xl shadow-sm border p-6 mb-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Category Filter */}
-              <div>
-                <h3 className="font-bold text-lg mb-4 text-gray-800 flex items-center gap-2">
-                  <span>📁</span> Category
-                </h3>
-                <div className="space-y-3">
-                  {categories.map(category => (
-                    <label key={category.value} className="flex items-center gap-3 cursor-pointer group">
-                      <input
-                        type="radio"
-                        name="category"
-                        value={category.value}
-                        checked={selectedCategory === category.value}
-                        onChange={(e) => setSelectedCategory(e.target.value)}
-                        className="text-green-500 focus:ring-green-500 w-4 h-4"
-                      />
-                      <span className="flex items-center gap-2 group-hover:text-green-600 transition-colors">
-                        <span className="text-lg">{category.icon}</span>
-                        <span>{category.label}</span>
-                      </span>
-                    </label>
-                  ))}
-                </div>
-              </div>
-
-              {/* Price Range Filter */}
-              <div>
-                <h3 className="font-bold text-lg mb-4 text-gray-800 flex items-center gap-2">
-                  <span>💰</span> Price Range
-                </h3>
-                <div className="space-y-6">
-                  <div className="bg-gray-100 p-4 rounded-xl">
-                    <input
-                      type="range"
-                      min="0"
-                      max={maxPrice}
-                      value={priceRange[1]}
-                      onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}
-                      className="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-green-500"
-                    />
-                    <div className="flex justify-between text-sm font-medium text-gray-600 mt-3">
-                      <span>${priceRange[0]}</span>
-                      <span className="text-green-600 font-bold">Up to ${priceRange[1]}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Results Summary */}
-              <div className="bg-green-50 p-6 rounded-xl border border-green-200">
-                <h3 className="font-bold text-lg mb-3 text-gray-800">📊 Filter Summary</h3>
-                <div className="space-y-2 text-sm text-gray-600">
-                  <p>• Category: <span className="font-semibold text-green-600">
-                    {categories.find(c => c.value === selectedCategory)?.label}
-                  </span></p>
-                  <p>• Price Range: <span className="font-semibold text-green-600">
-                    ${priceRange[0]} - ${priceRange[1]}
-                  </span></p>
-                  <p>• Sort By: <span className="font-semibold text-green-600">
-                    {sortOptions.find(s => s.value === sortBy)?.label}
-                  </span></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-
+        
         {/* Products Grid */}
         {filteredProducts.length === 0 ? (
           <div className="text-center py-16 bg-white rounded-2xl shadow-sm border">
@@ -516,7 +423,7 @@ function Shop() {
                   
                   <div className="flex items-center justify-between mb-3">
                     <span className="text-2xl font-bold text-green-600">
-                      ${typeof product.price === 'number' ? product.price.toFixed(2) : parseFloat(product.price || 0).toFixed(2)}
+                      ₹{typeof product.price === 'number' ? product.price.toFixed(2) : parseFloat(product.price || 0).toFixed(2)}
                     </span>
                     {product.rating && (
                       <div className="flex items-center gap-1 bg-yellow-100 px-2 py-1 rounded">

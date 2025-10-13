@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Navbar from '../component/Navbar';
 
 const About = () => {
   const features = [
@@ -54,8 +55,9 @@ const About = () => {
   ];
 
   return (
+  
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
+     {/* main section */}
       <section className="bg-green-600 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">About Falconz</h1>
@@ -66,7 +68,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Our Story Section */}
+      {/* story part */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -113,7 +115,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Why us section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -135,7 +137,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Stats */}
       <section className="py-16 bg-green-600 text-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -149,7 +151,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission & Vision */}
+      {/* our aim */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -177,7 +179,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Our team */}
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -204,7 +206,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* kepp in touch */}
       <section className="py-16 bg-green-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Experience Freshness?</h2>
