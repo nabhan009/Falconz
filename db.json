@@ -5,60 +5,8 @@
       "name": "savad",
       "email": "savad@gmail.com",
       "password": "zxcvbnm",
-      "cart": [
-        {
-          "id": "26",
-          "name": "Avacado Smoothie",
-          "price": 3.69,
-          "image": "https://i.pinimg.com/1200x/96/c0/fc/96c0fc6dd3d87abd3e6f747dc8d11964.jpg",
-          "category": "Beverages & Snacks",
-          "unit": "per lb",
-          "description": " Creamy, nutritious, and naturally sweet - a refreshing and healthy drink.",
-          "nutrition": {
-            "calories": "89 kcal",
-            "protein": "1.1g",
-            "fat": "0.3g",
-            "carbs": "23g",
-            "vitamins": "Potassium, Vitamin B6"
-          },
-          "rating": 4.5,
-          "reviews": 198,
-          "inStock": true,
-          "tags": [
-            "organic",
-            "Healthy",
-            "energy"
-          ],
-          "cartId": 1760167099086,
-          "quantity": 8,
-          "addedAt": "2025-10-11T07:18:19.086Z"
-        }
-      ],
+      "cart": [],
       "wishlist": [
-        {
-          "id": "26",
-          "name": "Avacado Smoothie",
-          "price": 3.69,
-          "image": "https://i.pinimg.com/1200x/96/c0/fc/96c0fc6dd3d87abd3e6f747dc8d11964.jpg",
-          "category": "Beverages & Snacks",
-          "unit": "per lb",
-          "description": " Creamy, nutritious, and naturally sweet - a refreshing and healthy drink.",
-          "nutrition": {
-            "calories": "89 kcal",
-            "protein": "1.1g",
-            "fat": "0.3g",
-            "carbs": "23g",
-            "vitamins": "Potassium, Vitamin B6"
-          },
-          "rating": 4.5,
-          "reviews": 198,
-          "inStock": true,
-          "tags": [
-            "organic",
-            "Healthy",
-            "energy"
-          ]
-        },
         {
           "id": "20",
           "name": "Avocados",
@@ -82,30 +30,6 @@
             "healthy-fats",
             "creamy",
             "ripe"
-          ]
-        },
-        {
-          "id": "28",
-          "name": "7Eleven Chips",
-          "price": 1.69,
-          "image": "https://i.pinimg.com/736x/9b/30/c5/9b30c56fdd77c11fc237d0f07e7629d2.jpg",
-          "category": "Beverages & Snacks",
-          "unit": "per lb",
-          "description": "Convenient, flavorful snack chips available in a variety of tastes, perfect for on-the-go munching",
-          "nutrition": {
-            "calories": "89 kcal",
-            "protein": "1.1g",
-            "fat": "0.3g",
-            "carbs": "23g",
-            "vitamins": "Potassium, Vitamin B6"
-          },
-          "rating": 4.5,
-          "reviews": 198,
-          "inStock": true,
-          "tags": [
-            "organic",
-            "Healthy",
-            "energy"
           ]
         }
       ],
@@ -146,7 +70,7 @@
             }
           ],
           "totalAmount": 4.059,
-          "status": "Success"
+          "status": "completed"
         },
         {
           "id": "order_1760158303775_gw2ojvs5r",
@@ -236,7 +160,7 @@
             }
           ],
           "totalAmount": 8.657,
-          "status": "Success"
+          "status": "completed"
         },
         {
           "id": "order_1760165214734_4tsj4rrae",
@@ -266,7 +190,7 @@
             }
           ],
           "totalAmount": 8.459000000000001,
-          "status": "Success"
+          "status": "completed"
         },
         {
           "id": "order_1760165228976_h1oke9qwf",
@@ -289,7 +213,7 @@
             }
           ],
           "totalAmount": 385.00000000000006,
-          "status": "Success"
+          "status": "completed"
         },
         {
           "id": "order_1760165239346_ysps4q1ch",
@@ -313,7 +237,7 @@
             }
           ],
           "totalAmount": 231.00000000000003,
-          "status": "Success"
+          "status": "completed"
         },
         {
           "id": "order_1760165250415_n4uyt0m25",
@@ -336,7 +260,120 @@
             }
           ],
           "totalAmount": 60.50000000000001,
-          "status": "Success"
+          "status": "completed"
+        },
+        {
+          "id": "order_1760347691184_ibji6asl5",
+          "orderDate": "2025-10-13T09:28:11.184Z",
+          "items": [
+            {
+              "id": "26",
+              "name": "Avacado Smoothie",
+              "price": 3.69,
+              "image": "https://i.pinimg.com/1200x/96/c0/fc/96c0fc6dd3d87abd3e6f747dc8d11964.jpg",
+              "category": "Beverages & Snacks",
+              "unit": "per lb",
+              "description": " Creamy, nutritious, and naturally sweet - a refreshing and healthy drink.",
+              "nutrition": {
+                "calories": "89 kcal",
+                "protein": "1.1g",
+                "fat": "0.3g",
+                "carbs": "23g",
+                "vitamins": "Potassium, Vitamin B6"
+              },
+              "rating": 4.5,
+              "reviews": 198,
+              "inStock": true,
+              "tags": [
+                "organic",
+                "Healthy",
+                "energy"
+              ],
+              "cartId": 1760167099086,
+              "quantity": 8,
+              "addedAt": "2025-10-11T07:18:19.086Z"
+            }
+          ],
+          "totalAmount": 32.472,
+          "status": "completed"
+        },
+        {
+          "id": "order_1760352082444_uvkq4r4o3",
+          "orderDate": "2025-10-13T10:41:22.444Z",
+          "items": [
+            {
+              "id": "20",
+              "name": "Avocados",
+              "price": 2.49,
+              "originalPrice": 2.99,
+              "image": "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?w=400",
+              "category": "fruits",
+              "unit": "each",
+              "description": "Hass avocados, perfectly ripe",
+              "nutrition": {
+                "calories": "160 kcal",
+                "protein": "2g",
+                "fat": "15g",
+                "carbs": "9g",
+                "vitamins": "Healthy Fats, Fiber"
+              },
+              "rating": 4.6,
+              "reviews": 245,
+              "inStock": true,
+              "tags": [
+                "healthy-fats",
+                "creamy",
+                "ripe"
+              ],
+              "cartId": 1760352073689,
+              "quantity": 1,
+              "addedAt": "2025-10-13T10:41:13.689Z"
+            }
+          ],
+          "totalAmount": 2.7390000000000003,
+          "status": "Pending"
+        },
+        {
+          "id": "order_1760503536215_uu2p9451v",
+          "orderDate": "2025-10-15T04:45:36.216Z",
+          "items": [
+            {
+              "id": "26",
+              "name": "Avacado Smoothie",
+              "price": "75",
+              "image": "https://i.pinimg.com/1200x/96/c0/fc/96c0fc6dd3d87abd3e6f747dc8d11964.jpg",
+              "category": "Beverages & Snacks",
+              "unit": "per lb",
+              "description": " Creamy, nutritious, and naturally sweet - a refreshing and healthy drink.",
+              "rating": 4.5,
+              "reviews": 198,
+              "inStock": true,
+              "quantity": 1
+            }
+          ],
+          "totalAmount": 75,
+          "status": "Pending"
+        },
+        {
+          "id": "order_1760503559893_dlow0xd9r",
+          "orderDate": "2025-10-15T04:45:59.893Z",
+          "items": [
+            {
+              "id": "28",
+              "name": "7Eleven Chips",
+              "price": "36",
+              "image": "https://i.pinimg.com/736x/9b/30/c5/9b30c56fdd77c11fc237d0f07e7629d2.jpg",
+              "category": "Beverages & Snacks",
+              "unit": "per lb",
+              "description": "Convenient, flavorful snack chips available in a variety of tastes, perfect for on-the-go munching",
+              "rating": 4.5,
+              "reviews": 198,
+              "inStock": true,
+              "quantity": 1
+            }
+          ],
+          "totalAmount": 36,
+          "status": "Pending"
         }
       ]
     },
@@ -425,6 +462,139 @@
           "status": "Success"
         }
       ]
+    },
+    {
+      "id": "4937",
+      "name": "adhil",
+      "email": "adhil@gmail.com",
+      "password": "zxcvbnm",
+      "cart": [
+        {
+          "id": "1760509468448",
+          "name": "Apple",
+          "price": "80",
+          "category": "Fru",
+          "image": "https://i.pinimg.com/736x/34/b7/7a/34b77a0e46a76592eb557f3d0e9354f0.jpg",
+          "description": "z",
+          "rating": 0,
+          "reviews": 0,
+          "inStock": true,
+          "cartId": 1760549272740,
+          "quantity": 2,
+          "addedAt": "2025-10-15T17:27:52.740Z"
+        }
+      ],
+      "wishlist": [
+        {
+          "id": "1760509468448",
+          "name": "Apple",
+          "price": "80",
+          "category": "Fru",
+          "image": "https://i.pinimg.com/736x/34/b7/7a/34b77a0e46a76592eb557f3d0e9354f0.jpg",
+          "description": "z",
+          "rating": 0,
+          "reviews": 0,
+          "inStock": true
+        }
+      ],
+      "isLoggedIn": false,
+      "role": "User",
+      "isBlock": false
+    },
+    {
+      "id": "31f6",
+      "name": "shifa",
+      "email": "shifa@gmail.com",
+      "password": "zxcvbnm",
+      "cart": [
+        {
+          "id": "1760509468448",
+          "name": "Apple",
+          "price": "80",
+          "category": "Fru",
+          "image": "https://i.pinimg.com/736x/34/b7/7a/34b77a0e46a76592eb557f3d0e9354f0.jpg",
+          "description": "z",
+          "rating": 0,
+          "reviews": 0,
+          "inStock": true,
+          "cartId": 1760548612562,
+          "quantity": 1,
+          "addedAt": "2025-10-15T17:16:52.562Z"
+        }
+      ],
+      "wishlist": [
+        {
+          "id": "1760509468448",
+          "name": "Apple",
+          "price": "80",
+          "category": "Fru",
+          "image": "https://i.pinimg.com/736x/34/b7/7a/34b77a0e46a76592eb557f3d0e9354f0.jpg",
+          "description": "z",
+          "rating": 0,
+          "reviews": 0,
+          "inStock": true
+        }
+      ],
+      "isLoggedIn": false,
+      "role": "User",
+      "isBlock": false,
+      "orders": [
+        {
+          "id": "order_1760547663949_egv8t036j",
+          "orderDate": "2025-10-15T17:01:03.949Z",
+          "items": [
+            {
+              "id": "26",
+              "name": "Avacado Smoothie",
+              "price": "75",
+              "image": "https://i.pinimg.com/1200x/96/c0/fc/96c0fc6dd3d87abd3e6f747dc8d11964.jpg",
+              "category": "Beverages & Snacks",
+              "unit": "per lb",
+              "description": " Creamy, nutritious, and naturally sweet - a refreshing and healthy drink.",
+              "rating": 4.5,
+              "reviews": 198,
+              "inStock": true,
+              "cartId": 1760547648646,
+              "quantity": 1,
+              "addedAt": "2025-10-15T17:00:48.646Z"
+            }
+          ],
+          "totalAmount": 82.5,
+          "status": "Pending"
+        },
+        {
+          "id": "order_1760548568805_8knc13fps",
+          "orderDate": "2025-10-15T17:16:08.805Z",
+          "items": [
+            {
+              "id": "26",
+              "name": "Avacado Smoothie",
+              "price": "75",
+              "image": "https://i.pinimg.com/1200x/96/c0/fc/96c0fc6dd3d87abd3e6f747dc8d11964.jpg",
+              "category": "Beverages & Snacks",
+              "unit": "per lb",
+              "description": " Creamy, nutritious, and naturally sweet - a refreshing and healthy drink.",
+              "rating": 4.5,
+              "reviews": 198,
+              "inStock": true,
+              "cartId": 1760547984117,
+              "quantity": 1,
+              "addedAt": "2025-10-15T17:06:24.117Z"
+            }
+          ],
+          "totalAmount": 82.5,
+          "status": "pending",
+          "shippingAddress": {
+            "name": "shifa",
+            "address": "sdfmhjhj",
+            "city": "hrtyryr",
+            "state": "dgdg",
+            "zipCode": "123456",
+            "phone": "867868878"
+          },
+          "paymentMethod": "credit-card"
+        }
+      ]
     }
   ],
   "Products": [
@@ -438,8 +608,7 @@
       "rating": 4.5,
       "reviews": 128,
       "inStock": true,
-      "isFeatured": true,
-      "id": "2358"
+      "isFeatured": true
     },
     {
       "id": "1",
@@ -533,8 +702,7 @@
       "description": "Fresh, boneless chicken breast - perfect for grilling or baking",
       "rating": 4.5,
       "reviews": 198,
-      "inStock": true,
-      "id": "83c8"
+      "inStock": true
     },
     {
       "id": "9",
@@ -668,7 +836,7 @@
     {
       "id": "19",
       "name": "Fresh Oranges",
-      "price": 3.99,
+      "price": "110",
       "originalPrice": 4.79,
       "image": "https://images.unsplash.com/photo-1547514701-42782101795e?w=400",
       "category": "fruits",
@@ -687,232 +855,128 @@
       "category": "fruits",
       "unit": "each",
       "description": "Hass avocados, perfectly ripe",
-      "nutrition": {
-        "calories": "160 kcal",
-        "protein": "2g",
-        "fat": "15g",
-        "carbs": "9g",
-        "vitamins": "Healthy Fats, Fiber"
-      },
       "rating": 4.6,
       "reviews": 245,
-      "inStock": true,
-      "tags": [
-        "healthy-fats",
-        "creamy",
-        "ripe"
-      ]
+      "inStock": true
     },
     {
       "id": "21",
       "name": "Italian Lemon",
-      "price": 2.99,
+      "price": "23",
       "originalPrice": 11.49,
       "image": "https://i.pinimg.com/1200x/e3/03/b5/e303b5337d79a91f121101ad833ff4c1.jpg",
       "category": "fruits",
       "unit": "16 oz bag",
       "description": "Fresh, zesty Italian lemons, perfect for cooking, baking, or refreshing drinks.",
-      "nutrition": {
-        "calories": "576 kcal (per 100g)",
-        "protein": "21g",
-        "fat": "49g",
-        "carbs": "22g",
-        "vitamins": "Vitamin E, Magnesium, Fiber"
-      },
       "rating": 4.7,
       "reviews": 260,
-      "inStock": true,
-      "tags": [
-        "protein",
-        "snack",
-        "healthy-fats"
-      ]
+      "inStock": true
     },
     {
       "id": "24",
       "name": "Fresh WaterMelone Juice",
-      "price": 1.69,
+      "price": "43",
       "image": "https://i.pinimg.com/1200x/48/14/b8/4814b8324e17030e35507ef3183d8c78.jpg",
       "category": "Beverages & Snacks",
       "unit": "per lb",
       "description": "Refreshing red slush WaterMelon Juice in a clear cup with a straw, perfect for summer moments.",
-      "nutrition": {
-        "calories": "89 kcal",
-        "protein": "1.1g",
-        "fat": "0.3g",
-        "carbs": "23g",
-        "vitamins": "Potassium, Vitamin B6"
-      },
       "rating": 4.5,
       "reviews": 198,
-      "inStock": true,
-      "tags": [
-        "organic",
-        "Healthy",
-        "energy"
-      ]
+      "inStock": true
     },
     {
       "id": "25",
       "name": "Berry Smoothie",
-      "price": 1.69,
+      "price": "96",
       "image": "https://i.pinimg.com/736x/89/f0/99/89f0996c697f5a8e6fce12981655871e.jpg",
       "category": "Beverages & Snacks",
       "unit": "per lb",
       "description": "Refreshing red slush WaterMelon Juice in a clear cup with a straw, perfect for summer moments.",
-      "nutrition": {
-        "calories": "89 kcal",
-        "protein": "1.1g",
-        "fat": "0.3g",
-        "carbs": "23g",
-        "vitamins": "Potassium, Vitamin B6"
-      },
       "rating": 4.5,
       "reviews": 198,
-      "inStock": true,
-      "tags": [
-        "organic",
-        "Healthy",
-        "energy"
-      ]
+      "inStock": true
     },
     {
       "id": "26",
       "name": "Avacado Smoothie",
-      "price": 3.69,
+      "price": "75",
       "image": "https://i.pinimg.com/1200x/96/c0/fc/96c0fc6dd3d87abd3e6f747dc8d11964.jpg",
       "category": "Beverages & Snacks",
       "unit": "per lb",
       "description": " Creamy, nutritious, and naturally sweet - a refreshing and healthy drink.",
-      "nutrition": {
-        "calories": "89 kcal",
-        "protein": "1.1g",
-        "fat": "0.3g",
-        "carbs": "23g",
-        "vitamins": "Potassium, Vitamin B6"
-      },
       "rating": 4.5,
       "reviews": 198,
-      "inStock": true,
-      "tags": [
-        "organic",
-        "Healthy",
-        "energy"
-      ]
+      "inStock": true
     },
     {
       "id": "27",
       "name": "Pringles",
-      "price": 1.69,
+      "price": "65",
       "image": "https://i.pinimg.com/736x/c3/30/36/c330362f128e69e3af5deb64df7571c6.jpg",
       "category": "Beverages & Snacks",
       "unit": "per lb",
       "description": "Crispy, thin, and stackable potato chips, perfect for snacking anytime",
-      "nutrition": {
-        "calories": "89 kcal",
-        "protein": "1.1g",
-        "fat": "0.3g",
-        "carbs": "23g",
-        "vitamins": "Potassium, Vitamin B6"
-      },
       "rating": 4.5,
       "reviews": 198,
-      "inStock": true,
-      "tags": [
-        "organic",
-        "Healthy",
-        "energy"
-      ]
+      "inStock": true
     },
     {
       "id": "28",
       "name": "7Eleven Chips",
-      "price": 1.69,
+      "price": "36",
       "image": "https://i.pinimg.com/736x/9b/30/c5/9b30c56fdd77c11fc237d0f07e7629d2.jpg",
       "category": "Beverages & Snacks",
       "unit": "per lb",
       "description": "Convenient, flavorful snack chips available in a variety of tastes, perfect for on-the-go munching",
-      "nutrition": {
-        "calories": "89 kcal",
-        "protein": "1.1g",
-        "fat": "0.3g",
-        "carbs": "23g",
-        "vitamins": "Potassium, Vitamin B6"
-      },
       "rating": 4.5,
       "reviews": 198,
-      "inStock": true,
-      "tags": [
-        "organic",
-        "Healthy",
-        "energy"
-      ]
+      "inStock": true
     },
     {
       "id": "29",
       "name": "Lay's Chips",
-      "price": 1.69,
+      "price": "60",
       "image": "https://i.pinimg.com/1200x/8e/5b/2a/8e5b2ac4ee72026c7dec1b4fc746543e.jpg",
       "category": "Beverages & Snacks",
       "unit": "per lb",
       "description": "Crispy, savory Lay's chips with a bold and playful twist—unleash the flavor of “Tears of Your Enemy”!",
-      "nutrition": {
-        "calories": "89 kcal",
-        "protein": "1.1g",
-        "fat": "0.3g",
-        "carbs": "23g",
-        "vitamins": "Potassium, Vitamin B6"
-      },
       "rating": 4.5,
       "reviews": 198,
-      "inStock": true,
-      "tags": [
-        "organic",
-        "Healthy",
-        "energy"
-      ]
+      "inStock": true
     },
     {
       "id": "30",
       "name": "Salmon Steak",
-      "price": 8.69,
+      "price": "11000",
       "image": "https://i.pinimg.com/1200x/3f/d3/75/3fd375886a6ec0dde253741147274392.jpg",
       "category": "meat",
       "unit": "per lb",
       "description": "Juicy, tender Salmo steak, perfectly seared and packed with rich, savory flavor for an unforgettable meal.",
-      "nutrition": {
-        "calories": "89 kcal",
-        "protein": "12.1g",
-        "fat": "0.3g",
-        "carbs": "20g",
-        "vitamins": "Potassium, Vitamin B6"
-      },
       "rating": 4.5,
       "reviews": 198,
-      "inStock": true,
-      "tags": [
-        "organic",
-        "Healthy",
-        "energy"
-      ]
+      "inStock": true
     },
     {
       "id": "31",
       "name": "Fresh Lamp Meat",
-      "price": 7.69,
+      "price": "900",
       "image": "https://i.pinimg.com/736x/32/c0/ca/32c0ca128f520af554642ca0853f5833.jpg",
       "category": "meat",
       "unit": "per lb",
       "description": "Refreshing red slush WaterMelon Juice in a clear cup with a straw, perfect for summer moments.",
-      "nutrition": {
-        "calories": "89 kcal",
-        "protein": "29.1g",
-        "fat": "0.3g",
-        "carbs": "23g",
-        "vitamins": "Potassium, Vitamin B6"
-      },
       "rating": 4.5,
       "reviews": 198,
+      "inStock": true
+    },
+    {
+      "id": "1760361627139",
+      "name": "pineapple",
+      "price": "126",
+      "category": "fruits",
+      "image": "https://i.pinimg.com/736x/ba/3b/a5/ba3ba5322939bb8ebf8f46d1877f9f47.jpg",
+      "description": "This fruit can be enjoyed fresh, grilled, juiced, or as a topping for desserts and savory dishes. Its tropical taste adds a burst of flavor to smoothies, salads, pizzas, and cocktails, making it a favorite worldwide.",
+      "rating": 4.5,
+      "reviews": 10,
       "inStock": true
     }
   ]

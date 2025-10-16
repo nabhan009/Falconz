@@ -123,7 +123,8 @@ import ProtectedRoute from "./context/ProtectedRoute";
 import AdminDashboard from "./Admin/Admin"
 import AllProducts from "./Admin/AllProducts";
 import AllOrders from "./Admin/AllOrders";
-import AllUsers from "./Admin/AllUsers";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+import AllUsers from "./Admin/AllUsers";             
+import Checkout from "./Pages/Checkout";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 
 function AppContent() {
   const navigate = useNavigate();
@@ -159,7 +160,7 @@ function AppContent() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/product/:id" element={<Product />} />
-
+        <Route path="/checkout" element={<Checkout />} />
         {/* Guest-only routes */}
         <Route
           path="/login"

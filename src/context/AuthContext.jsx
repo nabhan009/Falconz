@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
   const [profileOpen, setProfileOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // Load user from localStorage on mount
+  // Load user from localStorage
   useEffect(() => {
     const storedUser = localStorage.getItem("loggedInUser");
     if (storedUser) {
@@ -24,7 +24,7 @@ export const AuthProvider = ({ children }) => {
     setLoading(false);
   }, []);
 
-  // ✅ Login function (no navigation here)
+  // Login function
   const login = async (email, password) => {
     const { data } = await api.get("/users", { params: { email } });
     const foundUser = data[0];
@@ -41,7 +41,7 @@ export const AuthProvider = ({ children }) => {
     setUser(updatedUser);
     toast.success("Login successful!");
 
-    return updatedUser; // ✅ return the logged-in user
+    return updatedUser;
   };
 
   // Logout function
@@ -60,6 +60,8 @@ export const AuthProvider = ({ children }) => {
     localStorage.setItem("loggedInUser", JSON.stringify(updatedUserData));
     setUser(updatedUserData);
   };
+
+
 
   const wishlistCount = user?.wishlist?.length || 0;
   const cartCount = user?.cart?.length || 0;
@@ -92,3 +94,5 @@ export const useAuth = () => {
   if (!context) throw new Error("useAuth must be used within an AuthProvider");
   return context;
 };
+
+

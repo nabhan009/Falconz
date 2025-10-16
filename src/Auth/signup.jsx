@@ -90,7 +90,7 @@ function SignUp() {
       {success && (
         <div className="fixed top-5 right-5 z-50">
           <div className="bg-white text-green-700 font-semibold px-6 py-4 rounded-xl shadow-lg border border-green-600 animate-bounce">
-            ✅ Sign Up Successful! Redirecting...
+             Sign Up Successful! Redirecting...
           </div>
         </div>
       )}

@@ -1,11 +1,36 @@
-import React from "react";
-import { Menu, Bell, Search, ChevronDown } from "lucide-react";
+import React, { useState, useEffect } from "react";
+import { Menu, User, Mail } from "lucide-react";
+import api from "../Api/Api";
 
 const AdminNav = ({ setSidebarOpen }) => {
+  const [adminData, setAdminData] = useState(null);
+
+  useEffect(() => {
+    const fetchAdminData = async () => {
+      try {
+        const response = await api.get("/users");
+        const admin = response.data.find(user => user.role?.toLowerCase() === "admin");
+        if (admin) {
+          setAdminData({
+            name: admin.name || "Admin",
+            email: admin.email || "admin@example.com"
+          });
+        }
+      } catch (error) {
+        console.error("Failed to fetch admin data:", error);
+        setAdminData({
+          name: "admin",
+          email: "admin@example.com"
+        });
+      }
+    };
+
+    fetchAdminData();
+  }, []);
   return (
     <header className="bg-white shadow-sm z-40 border-b border-gray-200">
       <div className="flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
-        {/* Toggle Sidebar Button */}
+      {/* menu button */}
         <button
           onClick={() => setSidebarOpen(true)}
           className="p-2 rounded-md text-gray-400 hover:text-gray-600 hover:bg-gray-100 lg:hidden"
@@ -13,36 +38,25 @@ const AdminNav = ({ setSidebarOpen }) => {
           <Menu className="h-6 w-6" />
         </button>
 
-        {/* Desktop toggle button */}
-        <button
-          onClick={() => setSidebarOpen((prev) => !prev)}
-          className="hidden lg:flex p-2 rounded-md text-gray-400 hover:text-gray-600 hover:bg-gray-100"
-        >
-          <Menu className="h-6 w-6" />
-        </button>
-
-        {/* Search Bar */}
-        {/* <div className="flex-1 max-w-lg mx-4">
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-            <input
-              type="text"
-              placeholder="Search..."
-              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-            />
-          </div>
-        </div> */}
-
-        {/* Right Section */}
-        <div className="flex items-center space-x-4">
-          {/* <button className="relative p-2 text-gray-400 hover:text-gray-600">
-            <Bell className="h-5 w-5" />
-            <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
-          </button> */}
-
-          <div className="flex items-center space-x-3">
-            <span className="text-sm font-medium text-gray-700">muhammed Nabhan</span>
-            <ChevronDown className="h-4 w-4 text-gray-400" />
+        <div className="flex-1 flex justify-end">
+          <div className="flex items-center space-x-4">
+           {/* admin name&email */}
+            <div className="flex items-center space-x-3 bg-blue-100 rounded-lg px-4 py-2 border border-gray-200">
+              <div className="flex flex-col items-end">
+                <div className="flex items-center space-x-2">
+                  <User className="h-4 w-4 text-gray-500" />
+                  <span className="text-sm font-medium text-gray-900">
+                    {adminData?.name || "Loading..."}
+                  </span>
+                </div>
+                <div className="flex items-center space-x-2 mt-1">
+                  <Mail className="h-3 w-3 text-gray-400" />
+                  <span className="text-xs text-gray-600">
+                    {adminData?.email || "loading..."}
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
