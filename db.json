@@ -583,7 +583,7 @@
             }
           ],
           "totalAmount": 82.5,
-          "status": "pending",
+          "status": "completed",
           "shippingAddress": {
             "name": "shifa",
             "address": "sdfmhjhj",
@@ -977,6 +977,28 @@
       "description": "This fruit can be enjoyed fresh, grilled, juiced, or as a topping for desserts and savory dishes. Its tropical taste adds a burst of flavor to smoothies, salads, pizzas, and cocktails, making it a favorite worldwide.",
       "rating": 4.5,
       "reviews": 10,
+      "inStock": true
+    },
+    {
+      "id": "1760607214166",
+      "name": "Matcha Latte",
+      "price": "240",
+      "category": "Beverages & Snacks",
+      "image": "https://i.pinimg.com/736x/33/92/8a/33928a5a2307ae5a321edd819b40ef5e.jpg",
+      "description": "Fresh. Creamy. Naturally energizing.\nSay hello to your new favorite sip — the perfect blend of matcha, milk, and ice, topped with a cloud of whipped cream and a touch of green magic.\nTaste the calm energy in every swirl",
+      "rating": 3.6428851386000454,
+      "reviews": 11,
+      "inStock": true
+    },
+    {
+      "id": "1760607577945",
+      "name": "Sake Sangria",
+      "price": "140",
+      "category": "Beverages & Snacks",
+      "image": "https://i.pinimg.com/1200x/49/bd/c8/49bdc8e3f288a19ebd0fc46ba1afbbf2.jpg",
+      "description": "A delightful twist on the classic Spanish punch, Sake Sangria combines the delicate flavors of Japanese sake with fresh fruits and a touch of sweetness. A refreshing and light alternative to its wine-based counterpart, this cocktail is perfect for social gatherings and offers a unique fusion of East and West.",
+      "rating": 4.103607417033664,
+      "reviews": 84,
       "inStock": true
     }
   ]
