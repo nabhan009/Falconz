@@ -82,7 +82,7 @@ const Home = () => {
         >
           {[
             {
-              img: "https://images.unsplash.com/photo-1542838132-92c53300491e?w=1600&q=80",
+              img: "https://i.pinimg.com/736x/c4/18/9f/c4189f29c87fbb9033d03b8107a5f201.jpg",
               text: "Fresh Fruits & Vegetables",
             },
             {
@@ -90,7 +90,7 @@ const Home = () => {
               text: "Daily Essentials Delivered",
             },
             {
-              img: "https://i.pinimg.com/736x/c4/18/9f/c4189f29c87fbb9033d03b8107a5f201.jpg",
+              img: "https://images.unsplash.com/photo-1542838132-92c53300491e?w=1600&q=80",
               text: "Organic & Healthy Choices",
             },
           ].map((slide, index) => (
