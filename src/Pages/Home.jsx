@@ -90,7 +90,7 @@ const Home = () => {
               text: "Daily Essentials Delivered",
             },
             {
-              img: "https://i.pinimg.com/1200x/28/0c/16/280c1610de4a1a59bd8ed2dade4e3e7c.jpg",
+              img: "https://i.pinimg.com/736x/c4/18/9f/c4189f29c87fbb9033d03b8107a5f201.jpg",
               text: "Organic & Healthy Choices",
             },
           ].map((slide, index) => (
