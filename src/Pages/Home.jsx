@@ -86,7 +86,7 @@ const Home = () => {
               text: "Fresh Fruits & Vegetables",
             },
             {
-              img: "https://i.pinimg.com/736x/08/42/8b/08428b20ca86a8bf73c85e11ef1f3fa5.jpg",
+              img: "https://i.pinimg.com/1200x/90/14/69/901469628db3754828b0978a8dadb641.jpg",
               text: "Daily Essentials Delivered",
             },
             {
