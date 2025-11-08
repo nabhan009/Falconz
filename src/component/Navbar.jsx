@@ -105,7 +105,7 @@ const Navbar = () => {
                 Order History
               </button>
               <button
-                onClick={logout}
+                onClick={()=>logout()}
                 className="w-full bg-red-500 text-white py-2 mt-2 rounded-lg text-sm hover:bg-red-600"
               >
                 Logout
